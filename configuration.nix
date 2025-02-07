@@ -2,12 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      inputs.home-manager.nixosModules.default
     ];
 
   # Bootloader.
@@ -92,18 +93,25 @@
     ];
   };
 
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      "peio" = import ./home.nix;
+    };
+  };
+
   programs = {
     ssh = {
-	startAgent = true;
+	    startAgent = true;
     };
     gnupg = {
-	agent = {
-		enable = true;
-		#enableSSHSupport = true;
-	};
+	    agent = {
+		    enable = true;
+		    #enableSSHSupport = true;
+	    };
     };
     firefox = {
-	enable = true;
+	    enable = true;
     };
   };
 
