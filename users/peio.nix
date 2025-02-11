@@ -11,6 +11,7 @@
     my.browsers.chromium.enable = true;
     my.browsers.firefox.enable = true;
     my.editors.vscode.enable = true;
+    my.office.libreoffice.enable = true;
 
     home-manager = {
         extraSpecialArgs = { inherit inputs; };
