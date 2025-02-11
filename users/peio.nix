@@ -6,6 +6,9 @@
         extraGroups = [ "networkmanager" "wheel" ];
     };
 
+    # my toggles
+    my.browsers.brave.enable = true;
+
     home-manager = {
         extraSpecialArgs = { inherit inputs; };
         users.peio = {
