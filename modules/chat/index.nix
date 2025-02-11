@@ -2,5 +2,6 @@
 {
     imports = [
         ./slack.nix
+        ./whatsapp.nix
     ];
 }
