@@ -4,6 +4,7 @@
         systemPackages = with pkgs; [
             git
             gitFull
+            git-subrepo
         ];
     };
 }
