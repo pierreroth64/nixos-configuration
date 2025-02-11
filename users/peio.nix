@@ -3,7 +3,7 @@
     users.users.peio = {
         isNormalUser = true;
         description = "peio";
-        extraGroups = [ "networkmanager" "wheel" ];
+        extraGroups = [ "networkmanager" "wheel" "docker" "dialout" ];
     };
 
     home-manager = {
