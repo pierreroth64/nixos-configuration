@@ -4,6 +4,7 @@
     environment = {
         systemPackages = with pkgs; [
             gnupg
+            ledger-live-desktop
         ];
     };
     programs = {
