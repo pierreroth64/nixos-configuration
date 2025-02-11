@@ -1,8 +1,8 @@
 { pkgs, ... }:
 {
     imports = [
-        ./browsers.nix
+        ./browsers/index.nix
         ./programming.nix
-        ./editors.nix
+        ./editors/index.nix
     ];
 }

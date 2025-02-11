@@ -8,6 +8,8 @@
 
     # my toggles
     my.browsers.brave.enable = true;
+    my.browsers.chromium.enable = true;
+    my.editors.vscode.enable = true;
 
     home-manager = {
         extraSpecialArgs = { inherit inputs; };
