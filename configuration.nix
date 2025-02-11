@@ -70,16 +70,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.peio = {
-    isNormalUser = true;
-    description = "peio";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
-  };
-
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
