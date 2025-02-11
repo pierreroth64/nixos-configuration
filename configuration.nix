@@ -69,8 +69,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
-    kitty  
-    gnupg
     git
   ];
 
