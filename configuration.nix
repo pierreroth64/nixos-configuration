@@ -62,18 +62,6 @@
     pulse.enable = true;
   };
 
-  programs = {
-    ssh = {
-	    startAgent = true;
-    };
-    gnupg = {
-	    agent = {
-		    enable = true;
-		    #enableSSHSupport = true;
-	    };
-    };
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
