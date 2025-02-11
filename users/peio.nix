@@ -12,6 +12,12 @@
             home.username = "peio";
             home.homeDirectory = "/home/peio";
             home.stateVersion = "24.11";
+
+            programs.git = {
+            enable = true;
+            userName = "peio";
+            userEmail = "pierreroth64@gmail.com";
+            };
         };
     };
 }
