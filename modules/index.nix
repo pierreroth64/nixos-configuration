@@ -7,5 +7,6 @@
         ./editors/index.nix
         ./office/index.nix
         ./crypto.nix
+        ./udev.nix
     ];
 }
