@@ -72,9 +72,6 @@
 		    #enableSSHSupport = true;
 	    };
     };
-    firefox = {
-	    enable = true;
-    };
   };
 
   # Allow unfree packages
