@@ -8,6 +8,7 @@
   imports =
     [     
       inputs.home-manager.nixosModules.default
+      ./modules/default.nix
     ];
 
   networking.networkmanager.enable = true;
@@ -95,8 +96,6 @@
     kitty  
     gnupg
     git
-    vscode
-#  wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

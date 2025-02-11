@@ -14,9 +14,9 @@
             home.stateVersion = "24.11";
 
             programs.git = {
-            enable = true;
-            userName = "peio";
-            userEmail = "pierreroth64@gmail.com";
+                enable = true;
+                userName = "peio";
+                userEmail = "pierreroth64@gmail.com";
             };
         };
     };
