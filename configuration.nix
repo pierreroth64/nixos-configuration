@@ -70,13 +70,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "peio" = import ./home.nix;
-    };
-  };
-
   programs = {
     ssh = {
 	    startAgent = true;
