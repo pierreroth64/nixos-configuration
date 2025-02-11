@@ -8,7 +8,7 @@
   imports =
     [     
       inputs.home-manager.nixosModules.default
-      ./modules/default.nix
+      ./modules/index.nix
     ];
 
   networking.networkmanager.enable = true;
