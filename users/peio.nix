@@ -17,6 +17,15 @@
                 enable = true;
                 userName = "peio";
                 userEmail = "pierreroth64@gmail.com";
+                aliases = {
+                    co = "checkout";
+                    ci = "commit";
+                    ds = "diff --staged";
+                    st = "status -sb";
+                    unstage = "reset HEAD --";
+                    untrack = "rm --cached";
+                    ls = "log --graph --pretty=format:'%C(yellow)%h %C(blue)%ad %C(red)%d %C(reset)%s %C(green)[%an]' --decorate --date=short";
+                };
             };
         };
     };
