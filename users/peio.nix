@@ -12,6 +12,7 @@
     my.browsers.firefox.enable = true;
     my.editors.vscode.enable = true;
     my.office.libreoffice.enable = true;
+    my.chat.slack.enable = true;
 
     home-manager = {
         extraSpecialArgs = { inherit inputs; };
