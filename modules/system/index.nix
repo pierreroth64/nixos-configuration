@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
     imports = [
-        ./programming.nix
+        ./git.nix
         ./crypto.nix
         ./udev.nix
     ];

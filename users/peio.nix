@@ -18,6 +18,7 @@ in
     my.peio.office.libreoffice.enable = true;
     my.peio.chat.whatsapp.enable = true;
     my.peio.chat.slack.enable = true;
+    my.peio.currencies.ledger.enable = true;
 
     imports = [
        (import ../modules/home/index.nix myuser)
