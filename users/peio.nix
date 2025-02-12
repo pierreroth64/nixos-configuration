@@ -16,6 +16,8 @@ in
     my.peio.browsers.firefox.enable = true;
     my.peio.editors.vscode.enable = true;
     my.peio.office.libreoffice.enable = true;
+    my.peio.chat.whatsapp.enable = true;
+    my.peio.chat.slack.enable = true;
 
     imports = [
        (import ../modules/home/index.nix myuser)
