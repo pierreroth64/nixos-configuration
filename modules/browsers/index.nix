@@ -1,7 +1,7 @@
 { pkgs, ... }: 
 {
     imports = [
-        ./brave.nix
+        #./brave.nix
         ./chromium.nix
         ./firefox.nix
     ];
