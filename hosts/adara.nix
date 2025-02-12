@@ -5,8 +5,6 @@
     ../users/peio.nix
   ];
 
-  # my toggles
-  my.editors.vscode.enable = true;
   my.office.libreoffice.enable = true;
   my.chat.slack.enable = true;
   my.chat.whatsapp.enable = true;

@@ -3,7 +3,6 @@
     imports = [
         ./chat/index.nix
         ./programming.nix
-        ./editors/index.nix
         ./office/index.nix
         ./crypto.nix
         ./udev.nix

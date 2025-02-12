@@ -3,5 +3,6 @@
 {
     imports = [
         (import ./browsers/index.nix user)
+        (import ./editors/index.nix user)
     ];
 }
