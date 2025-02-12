@@ -5,7 +5,6 @@
     ../users/peio.nix
   ];
 
-  my.office.libreoffice.enable = true;
   my.chat.slack.enable = true;
   my.chat.whatsapp.enable = true;
 

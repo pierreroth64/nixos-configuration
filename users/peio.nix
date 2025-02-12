@@ -15,6 +15,7 @@ in
     my.peio.browsers.brave.enable = true;
     my.peio.browsers.firefox.enable = true;
     my.peio.editors.vscode.enable = true;
+    my.peio.office.libreoffice.enable = true;
 
     imports = [
        (import ../modules/home/index.nix myuser)
