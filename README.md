@@ -18,4 +18,5 @@ For example, my sons do not care (yet) about programming. Why then exposing them
 
 - Modules located in `./modules/home` are home-manager ones.
 - Modules located in `./modules/system` are system-wide nixos ones.
-- Modules located in `./hardware` are a verbatim copy of hardware scan during nixos installation.
+- Modules located in `./hardware/scanned` are a verbatim copy of hardware scan during nixos installation.
+- Modules located in `./hardware` are the ones configuring the hardware (bootloader, audio, etc...)

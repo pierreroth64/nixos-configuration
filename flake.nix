@@ -15,7 +15,8 @@
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
-        ./hardware/hardware-framework13.nix
+        ./hardware/scanned/hardware-framework13.nix
+        ./hardware/index.nix
         ./hosts/adara.nix
         ./configuration.nix
         inputs.home-manager.nixosModules.default
