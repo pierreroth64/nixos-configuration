@@ -5,12 +5,12 @@ let
 in
 {
     options = {
-        my.${userName}.browsers.chromimum.enable = lib.mkEnableOption "enable chromimum browser for ${userName}";
+        my.${userName}.browsers.chromium.enable = lib.mkEnableOption "enable chromium browser for ${userName}";
     };
     
-    config = lib.mkIf cfg.chromimum.enable {
+    config = lib.mkIf cfg.chromium.enable {
         home-manager.users.${userName}.home.packages = with pkgs; [
-            chromimum
+            chromium
         ];
 
         programs.chromium.enable = true;

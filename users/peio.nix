@@ -13,7 +13,8 @@ in
     };
 
     # you just have to toggle this flags to enable/disable a module for this user
-    my.peio.browsers.brave.enable = true;
+    #my.peio.browsers.brave.enable = true;
+    #my.peio.browsers.chromium.enable = true;
     my.peio.browsers.firefox.enable = true;
     my.peio.editors.vscode.enable = true;
     my.peio.office.libreoffice.enable = true;
