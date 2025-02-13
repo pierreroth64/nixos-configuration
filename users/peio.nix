@@ -13,6 +13,7 @@ in
     };
 
     # you just have to toggle this flags to enable/disable a module for this user
+    my.peio.cli.git.enable = true;
     #my.peio.browsers.brave.enable = true;
     #my.peio.browsers.chromium.enable = true;
     my.peio.browsers.firefox.enable = true;
@@ -32,21 +33,6 @@ in
             home.username = myuser.userName;
             home.homeDirectory = "/home/${myuser.userName}";
             home.stateVersion = "24.11";
-
-            programs.git = {
-                enable = true;
-                userName = myuser.userName;
-                userEmail = myuser.userEmail;
-                aliases = {
-                    co = "checkout";
-                    ci = "commit";
-                    ds = "diff --staged";
-                    st = "status -sb";
-                    unstage = "reset HEAD --";
-                    untrack = "rm --cached";
-                    ls = "log --graph --pretty=format:'%C(yellow)%h %C(blue)%ad %C(red)%d %C(reset)%s %C(green)[%an]' --decorate --date=short";
-                };
-            };
         };
     };
 }
