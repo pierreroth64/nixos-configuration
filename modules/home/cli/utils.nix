@@ -9,13 +9,39 @@ in
     };
     
     config = lib.mkIf cfg.utils.enable {
-        home-manager.users.${userName}.programs = {
-            yazi.enable = true;
-            btop.enable = true;
-            ripgrep.enable = true;
-            bat = {
+        home-manager.users.${userName} = {
+            programs = {
+                yazi.enable = true;
+                btop.enable = true;
+                ripgrep.enable = true;
+                fzf.enable = true;
+                eza.enable = true;
+                zoxide = {
                 enable = true;
-                extraPackages = with pkgs.bat-extras; [ batman batgrep ];
+                    options = [ "--cmd cd" ];
+                };
+                direnv = {
+                    enable = true;
+                    nix-direnv = {
+                        enable = true;
+                    };
+                };
+                bat = {
+                    enable = true;
+                    extraPackages = with pkgs.bat-extras; [ batman batgrep ];
+                };     
+            };
+            home.shellAliases = let newls = "eza --git --header --icons"; in {
+                cat = "bat";
+                top = "btop";
+                ".." = "cd ..";
+                "..." = "cd ../..";
+                ls = "${newls}";
+                ll = "${newls} -l";
+                la = "${newls} -a";
+                lla = "${newls} -la";
+                man = "batman";
+                grep = "batgrep";
             };
         };
     };
