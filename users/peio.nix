@@ -31,6 +31,8 @@ in
   my.peio.chat.whatsapp.enable = true;
   my.peio.chat.slack.enable = true;
   my.peio.currencies.ledger.enable = true;
+  my.peio.media.spotify.enable = true;
+  my.peio.media.vlc.enable = true;
 
   imports = [
     (import ../modules/home/index.nix myuser)
