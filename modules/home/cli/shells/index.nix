@@ -19,6 +19,7 @@ let
       ll = "${newls} -l";
       la = "${newls} -a";
       lla = "${newls} -la";
+      tree = "${newls} --tree";
       man = "batman";
       grep = "batgrep";
     };
