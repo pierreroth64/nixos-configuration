@@ -1,6 +1,5 @@
 { config, pkgs, ... }:
 {
-  users.groups.plugdev.members = [ "peio" ];
   services = {
     udev = {
       extraRules = ''

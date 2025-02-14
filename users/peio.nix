@@ -6,9 +6,9 @@ let
   };
 in
 {
-  users.users.peio = {
+  users.users.${myuser.userName} = {
     isNormalUser = true;
-    description = "peio";
+    description = "user is ${myuser.userName}";
     extraGroups = [
       "networkmanager"
       "wheel"
@@ -16,6 +16,7 @@ in
       "dialout"
     ];
   };
+  users.groups.plugdev.members = [ myuser.userName ];
 
   # you just have to toggle these flags to enable/disable a module for this user
   my.peio.cli.git.enable = true;
