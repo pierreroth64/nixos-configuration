@@ -9,6 +9,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     treefmt-nix.url = "github:numtide/treefmt-nix";
+    stylix.url = "github:danth/stylix/release-24.11";
   };
 
   outputs =
@@ -51,6 +52,7 @@
           ./hosts/adara.nix
           ./configuration.nix
           inputs.home-manager.nixosModules.default
+          inputs.stylix.nixosModules.stylix
           {
             home-manager = {
               useUserPackages = true;

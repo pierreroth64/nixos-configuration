@@ -18,6 +18,8 @@
     "flakes"
   ];
 
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+
   time.timeZone = "Europe/Paris";
 
   i18n.defaultLocale = "en_US.UTF-8";
