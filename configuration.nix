@@ -1,15 +1,22 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
-  imports =
-    [     
-      inputs.home-manager.nixosModules.default
-      ./modules/system/index.nix
-    ];
+  imports = [
+    inputs.home-manager.nixosModules.default
+    ./modules/system/index.nix
+  ];
 
   networking.networkmanager.enable = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   time.timeZone = "Europe/Paris";
 
@@ -64,6 +71,7 @@
   environment.systemPackages = with pkgs; [
     vim
     git
+    nixfmt-rfc-style
   ];
 
   # This value determines the NixOS release from which the default

@@ -1,28 +1,37 @@
 { userName, ... }@user:
-{ pkgs, lib, config, ...}:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 let
-    shellAliases = let newls = "eza --git --header --icons"; in {
-        cat = "bat";
-        top = "btop";
-        ".." = "cd ..";
-        "..." = "cd ../..";
-        ls = "${newls}";
-        ll = "${newls} -l";
-        la = "${newls} -a";
-        lla = "${newls} -la";
-        man = "batman";
-        grep = "batgrep";
+  shellAliases =
+    let
+      newls = "eza --git --header --icons";
+    in
+    {
+      cat = "bat";
+      top = "btop";
+      ".." = "cd ..";
+      "..." = "cd ../..";
+      ls = "${newls}";
+      ll = "${newls} -l";
+      la = "${newls} -a";
+      lla = "${newls} -la";
+      man = "batman";
+      grep = "batgrep";
     };
 in
 {
-    imports = [
-        (import ./bash.nix user)
-        (import ./zsh.nix user)
-    ];
+  imports = [
+    (import ./bash.nix user)
+    (import ./zsh.nix user)
+  ];
 
-    config = {
-        home-manager.users.${userName}.home = {
-            inherit shellAliases;
-        };
+  config = {
+    home-manager.users.${userName}.home = {
+      inherit shellAliases;
     };
+  };
 }

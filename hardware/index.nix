@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-    imports = [
-        ./bootloader.nix
-    ];
+  imports = [
+    ./bootloader.nix
+  ];
 }

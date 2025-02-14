@@ -10,23 +10,24 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: 
-  {
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-        ./hardware/scanned/hardware-framework13.nix
-        ./hardware/index.nix
-        ./hosts/adara.nix
-        ./configuration.nix
-        inputs.home-manager.nixosModules.default
-        {
-          home-manager = {
-            useUserPackages = true;
-            useGlobalPkgs = true;
-          };
-        }
-      ];
+  outputs =
+    { self, nixpkgs, ... }@inputs:
+    {
+      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hardware/scanned/hardware-framework13.nix
+          ./hardware/index.nix
+          ./hosts/adara.nix
+          ./configuration.nix
+          inputs.home-manager.nixosModules.default
+          {
+            home-manager = {
+              useUserPackages = true;
+              useGlobalPkgs = true;
+            };
+          }
+        ];
+      };
     };
-  };
 }

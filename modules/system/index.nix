@@ -1,8 +1,8 @@
 { pkgs, ... }:
 {
-    imports = [
-        ./git.nix
-        ./crypto.nix
-        ./udev.nix
-    ];
+  imports = [
+    ./git.nix
+    ./crypto.nix
+    ./udev.nix
+  ];
 }

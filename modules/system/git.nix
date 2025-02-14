@@ -1,10 +1,10 @@
-{ pkgs, ...}:
+{ pkgs, ... }:
 {
-    environment = {
-        systemPackages = with pkgs; [
-            git
-            gitFull
-            git-subrepo
-        ];
-    };
+  environment = {
+    systemPackages = with pkgs; [
+      git
+      gitFull
+      git-subrepo
+    ];
+  };
 }
