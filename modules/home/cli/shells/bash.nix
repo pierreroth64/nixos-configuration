@@ -15,7 +15,12 @@ in
 
   config = lib.mkIf cfg.bash.enable {
     home-manager.users.${userName}.programs = {
-      bash.enable = true;
+      bash = {
+        enable = true;
+        sessionVariables = {
+          EDITOR = "vim";
+        };
+      };
     };
   };
 }

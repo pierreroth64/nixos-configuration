@@ -18,6 +18,9 @@ in
       programs = {
         zsh = {
           enable = true;
+          sessionVariables = {
+            EDITOR = "vim";
+          };
         };
       };
     };

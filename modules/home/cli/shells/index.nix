@@ -31,8 +31,10 @@ in
   ];
 
   config = {
-    home-manager.users.${userName}.home = {
-      inherit shellAliases;
+    home-manager.users.${userName} = {
+      home = {
+        inherit shellAliases;
+      };
     };
   };
 }
