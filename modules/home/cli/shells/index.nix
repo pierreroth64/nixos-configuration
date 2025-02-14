@@ -21,9 +21,8 @@ in
     ];
 
     config = {
-        home-manager.users.${userName}.programs = {
-            bash.shellAliases = shellAliases;
-            zsh.shellAliases = shellAliases; 
+        home-manager.users.${userName}.home = {
+            inherit shellAliases;
         };
     };
 }
