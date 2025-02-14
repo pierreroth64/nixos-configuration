@@ -71,7 +71,6 @@
   environment.systemPackages = with pkgs; [
     vim
     git
-    nixfmt-rfc-style
   ];
 
   # This value determines the NixOS release from which the default
