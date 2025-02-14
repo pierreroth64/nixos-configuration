@@ -5,6 +5,7 @@
       git
       gitFull
       git-subrepo
+      git-extras
     ];
   };
 }
