@@ -3,5 +3,6 @@
 {
     imports = [
         (import ./git.nix user)
+        (import ./utils.nix user)
     ];
 }
