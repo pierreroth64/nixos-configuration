@@ -8,7 +8,7 @@ in
 {
   users.users.${myuser.userName} = {
     isNormalUser = true;
-    description = "user is ${myuser.userName}";
+    description = myuser.userName;
     extraGroups = [
       "networkmanager"
       "wheel"
