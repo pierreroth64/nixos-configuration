@@ -12,7 +12,12 @@
   };
 
   outputs =
-    { self, nixpkgs, treefmt-nix, ... }@inputs:
+    {
+      self,
+      nixpkgs,
+      treefmt-nix,
+      ...
+    }@inputs:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
