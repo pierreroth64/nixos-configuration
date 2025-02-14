@@ -11,6 +11,8 @@
     ./modules/system/index.nix
   ];
 
+  home-manager.backupFileExtension = "backup";
+
   networking.networkmanager.enable = true;
 
   nix.settings.experimental-features = [
@@ -18,7 +20,9 @@
     "flakes"
   ];
 
+  stylix.enable = true;
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+  stylix.image = ./assets/sanchese.jpg;
 
   time.timeZone = "Europe/Paris";
 

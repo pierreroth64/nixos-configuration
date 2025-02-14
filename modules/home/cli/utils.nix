@@ -19,8 +19,8 @@ in
         kitty = {
           enable = true;
           font = {
-            name = "FiraCode Nerd Font Mono";
-            size = 10.0;
+            name = lib.mkForce "FiraCode Nerd Font Mono";
+            size = lib.mkForce 11.0;
           };
         };
         yazi.enable = true;
