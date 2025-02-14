@@ -10,5 +10,8 @@
     ../users/peio.nix
   ];
 
-  networking.hostName = "adara";
+  networking = {
+    hostName = "adara";
+    networkmanager.enable = true;
+  };
 }

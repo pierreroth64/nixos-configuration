@@ -13,8 +13,6 @@
 
   home-manager.backupFileExtension = "backup";
 
-  networking.networkmanager.enable = true;
-
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
