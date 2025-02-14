@@ -14,8 +14,12 @@ in
   };
 
   config = lib.mkIf cfg.zsh.enable {
-    home-manager.users.${userName}.programs = {
-      zsh.enable = true;
+    home-manager.users.${userName} = {
+      programs = {
+        zsh = {
+          enable = true;
+        };
+      };
     };
   };
 }
