@@ -11,13 +11,20 @@ in
     config = lib.mkIf cfg.utils.enable {
         home-manager.users.${userName} = {
             programs = {
+                kitty = {
+                    enable = true;
+                    font = {
+                        name = "FiraCode Nerd Font Mono";
+                        size = 10.0;
+                    };
+                };
                 yazi.enable = true;
                 btop.enable = true;
                 ripgrep.enable = true;
                 fzf.enable = true;
                 eza.enable = true;
                 zoxide = {
-                enable = true;
+                    enable = true;
                     options = [ "--cmd cd" ];
                 };
                 direnv = {
@@ -30,18 +37,6 @@ in
                     enable = true;
                     extraPackages = with pkgs.bat-extras; [ batman batgrep ];
                 };     
-            };
-            home.shellAliases = let newls = "eza --git --header --icons"; in {
-                cat = "bat";
-                top = "btop";
-                ".." = "cd ..";
-                "..." = "cd ../..";
-                ls = "${newls}";
-                ll = "${newls} -l";
-                la = "${newls} -a";
-                lla = "${newls} -la";
-                man = "batman";
-                grep = "batgrep";
             };
         };
     };

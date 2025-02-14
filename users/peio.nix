@@ -15,6 +15,8 @@ in
     # you just have to toggle this flags to enable/disable a module for this user
     my.peio.cli.git.enable = true;
     my.peio.cli.utils.enable = true;
+    my.peio.cli.shells.bash.enable = true;
+    my.peio.cli.shells.zsh.enable = true;
     #my.peio.browsers.brave.enable = true;
     #my.peio.browsers.chromium.enable = true;
     my.peio.browsers.firefox.enable = true;
