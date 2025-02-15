@@ -17,6 +17,7 @@ in
     ];
   };
   users.groups.plugdev.members = [ myuser.userName ];
+  users.groups.i2c.members = [ myuser.userName ];
 
   # you just have to toggle these flags to enable/disable a module for this user
   my.peio.cli.git.enable = true;
@@ -33,6 +34,7 @@ in
   my.peio.currencies.ledger.enable = true;
   my.peio.media.spotify.enable = true;
   my.peio.media.vlc.enable = true;
+  my.peio.embedded.enable = true;
 
   imports = [
     (import ../modules/home/index.nix myuser)
