@@ -14,8 +14,20 @@ in
   };
 
   config = lib.mkIf cfg.vscode.enable {
-    home-manager.users.${userName}.home.packages = with pkgs; [
-      vscode
-    ];
+    home-manager.users.${userName} = {
+      home.packages = with pkgs; [
+        vscode
+      ];
+      programs.vscode.keybindings = [
+        {
+          key = "Ctrl + PageUp";
+          command = "editor.action.moveLinesUpAction";
+        }
+        {
+          key = "Ctrl + PageDown";
+          command = "editor.action.moveLinesDownAction";
+        }
+      ];
+    };
   };
 }
