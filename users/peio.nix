@@ -35,6 +35,7 @@ in
   my.peio.media.spotify.enable = true;
   my.peio.media.vlc.enable = true;
   my.peio.embedded.enable = true;
+  my.peio.eove.enable = true;
 
   imports = [
     (import ../modules/home/index.nix myuser)
