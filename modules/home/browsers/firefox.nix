@@ -15,14 +15,13 @@ in
   };
 
   config = lib.mkIf cfg.firefox.enable {
-    home-manager.users.${userName}.home.packages = with pkgs; [
+    home-manager.users.${userName}.home.packages = with pkgs.unstable; [
       firefox
     ];
 
     programs = {
       firefox = {
         enable = true;
-        package = pkgs.unstable.firefox-bin;
         policies = {
           DisableTelemetry = true;
           DisableFirefoxStudies = true;

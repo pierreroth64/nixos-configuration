@@ -14,7 +14,7 @@ in
   };
 
   config = lib.mkIf cfg.spotify.enable {
-    home-manager.users.${userName}.home.packages = with pkgs; [
+    home-manager.users.${userName}.home.packages = with pkgs.unstable; [
       spotify
     ];
   };

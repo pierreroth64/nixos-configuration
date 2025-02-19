@@ -15,7 +15,7 @@ in
   };
 
   config = lib.mkIf cfg.chromium.enable {
-    home-manager.users.${userName}.home.packages = with pkgs; [
+    home-manager.users.${userName}.home.packages = with pkgs.unstable; [
       chromium
     ];
 

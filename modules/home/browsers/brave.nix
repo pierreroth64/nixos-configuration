@@ -14,7 +14,7 @@ in
   };
 
   config = lib.mkIf cfg.brave.enable {
-    home-manager.users.${userName}.home.packages = with pkgs; [
+    home-manager.users.${userName}.home.packages = with pkgs.unstable; [
       brave
     ];
   };

@@ -23,7 +23,10 @@
       system = "x86_64-linux";
       lib = nixpkgs.lib;
       pkgs = nixpkgs.legacyPackages.${system};
-      unstable = import inputs.unstable-pkgs { inherit system; config.allowUnfree = true; };
+      unstable = import inputs.unstable-pkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
       treefmt-config = {
         projectRootFile = "flake.nix";
         programs = {
