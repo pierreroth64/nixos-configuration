@@ -23,6 +23,7 @@
       system = "x86_64-linux";
       lib = nixpkgs.lib;
       pkgs = nixpkgs.legacyPackages.${system};
+      unstable = import inputs.unstable-pkgs { inherit system; config.allowUnfree = true; };
       treefmt-config = {
         projectRootFile = "flake.nix";
         programs = {
@@ -47,6 +48,7 @@
       nixosConfigurations.default = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
+          { nixpkgs.overlays = [ (final: prev: { inherit unstable; }) ]; }
           ./hardware/scanned/hardware-framework13.nix
           ./hardware/index.nix
           ./hosts/adara.nix

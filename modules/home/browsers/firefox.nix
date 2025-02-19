@@ -22,6 +22,7 @@ in
     programs = {
       firefox = {
         enable = true;
+        package = pkgs.unstable.firefox-bin;
         policies = {
           DisableTelemetry = true;
           DisableFirefoxStudies = true;
