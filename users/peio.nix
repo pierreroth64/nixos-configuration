@@ -20,23 +20,41 @@ in
   users.groups.i2c.members = [ myuser.userName ];
 
   # you just have to toggle these flags to enable/disable a module for this user
-  my.peio.cli.git.enable = true;
-  my.peio.cli.utils.enable = true;
-  my.peio.cli.shells.bash.enable = true;
-  my.peio.cli.shells.zsh.enable = true;
-  #my.peio.browsers.brave.enable = true;
-  #my.peio.browsers.chromium.enable = true;
-  my.peio.browsers.firefox.enable = true;
-  my.peio.browsers.firefox.extensions.ublock-origin.enable = true;
-  my.peio.editors.vscode.enable = true;
-  my.peio.office.libreoffice.enable = true;
-  my.peio.chat.whatsapp.enable = true;
-  my.peio.chat.slack.enable = true;
-  my.peio.currencies.ledger.enable = true;
-  my.peio.media.spotify.enable = true;
-  my.peio.media.vlc.enable = true;
-  my.peio.embedded.enable = true;
-  my.peio.eove.enable = true;
+  my.peio = {
+    cli = {
+      git.enable = true;
+      utils.enable = true;
+      shells.bash.enable = true;
+      shells.zsh.enable = true;
+    };
+    browsers = {
+      brave.enable = false;
+      chromium.enable = false;
+      firefox = {
+        enable = true;
+        extensions.ublock-origin.enable = true;
+      };
+    };
+    editors = {
+      vscode.enable = true;
+    };
+    office = {
+      libreoffice.enable = true;
+    };
+    chat = {
+      slack.enable = true;
+      whatsapp.enable = true;
+    };
+    currencies = {
+      ledger.enable = true;
+    };
+    media = {
+      spotify.enable = true;
+      vlc.enable = true;
+    };
+    embedded.enable = true;
+    eove.enable = true;
+  };
 
   imports = [
     (import ../modules/home/index.nix myuser)
