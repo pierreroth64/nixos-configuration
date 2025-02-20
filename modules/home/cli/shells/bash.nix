@@ -14,6 +14,11 @@ in
   };
 
   config = lib.mkIf cfg.bash.enable {
+
+    programs.bash.interactiveShellInit = ''
+      eval "$(starship init bash)"
+    '';
+
     home-manager.users.${userName}.programs = {
       bash = {
         enable = true;

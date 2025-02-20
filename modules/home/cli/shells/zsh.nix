@@ -14,6 +14,10 @@ in
   };
 
   config = lib.mkIf cfg.zsh.enable {
+    programs.zsh.interactiveShellInit = ''
+      eval "$(starship init zsh)"
+    '';
+
     home-manager.users.${userName} = {
       programs = {
         zsh = {
