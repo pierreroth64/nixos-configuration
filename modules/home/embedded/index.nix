@@ -7,7 +7,9 @@
 }:
 {
   imports = [
+    (import ./android.nix user)
     (import ./i2c.nix user)
+    (import ./minicom.nix user)
   ];
 
   options = {
