@@ -10,8 +10,20 @@ let
 in
 {
   options = {
-    my.${userName}.browsers.firefox.enable =
-      lib.mkEnableOption "enable firefox browser for ${userName}";
+    my.${userName}.browsers.firefox = {
+      enable = lib.mkEnableOption "enable firefox browser for ${userName}";
+      extensions =
+        with builtins;
+        let
+          mkEnableExtensionOption = shortId: {
+            name = shortId;
+            value = lib.mkEnableOption "enable firefox browser extension ${shortId} for ${userName}";
+          };
+        in
+        listToAttrs [
+          (mkEnableExtensionOption "ublock-origin")
+        ];
+    };
   };
 
   config = lib.mkIf cfg.firefox.enable {

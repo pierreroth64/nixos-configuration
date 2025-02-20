@@ -27,6 +27,7 @@ in
   #my.peio.browsers.brave.enable = true;
   #my.peio.browsers.chromium.enable = true;
   my.peio.browsers.firefox.enable = true;
+  my.peio.browsers.firefox.extensions.ublock-origin.enable = true;
   my.peio.editors.vscode.enable = true;
   my.peio.office.libreoffice.enable = true;
   my.peio.chat.whatsapp.enable = true;
