@@ -14,6 +14,16 @@ in
   };
 
   config = lib.mkIf cfg.docker.enable {
+    virtualisation = {
+      docker = {
+        enable = true;
+      };
+    };
+    users.users.${userName} = {
+      extraGroups = [
+        "docker"
+      ];
+    };
     home-manager.users.${userName}.home.packages = with pkgs; [
       docker
       docker-compose

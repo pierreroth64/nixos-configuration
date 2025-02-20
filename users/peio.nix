@@ -12,7 +12,6 @@ in
     extraGroups = [
       "networkmanager"
       "wheel"
-      "docker"
       "dialout"
     ];
   };
