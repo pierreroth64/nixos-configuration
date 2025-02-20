@@ -7,22 +7,24 @@
 }:
 let
   cfg = config.my.${userName}.browsers;
+  extensions = [
+    {
+      shortId = "ublock-origin";
+    }
+  ];
+  mkEnableExtensionOption =
+    with builtins;
+    e: {
+      name = e.shortId;
+      value = lib.mkEnableOption "enable firefox browser extension ${e.shortId} for ${userName}";
+    };
+
 in
 {
   options = {
     my.${userName}.browsers.firefox = {
       enable = lib.mkEnableOption "enable firefox browser for ${userName}";
-      extensions =
-        with builtins;
-        let
-          mkEnableExtensionOption = shortId: {
-            name = shortId;
-            value = lib.mkEnableOption "enable firefox browser extension ${shortId} for ${userName}";
-          };
-        in
-        listToAttrs [
-          (mkEnableExtensionOption "ublock-origin")
-        ];
+      extensions = with builtins; listToAttrs (map (e: mkEnableExtensionOption e) extensions);
     };
   };
 
