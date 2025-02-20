@@ -55,6 +55,10 @@ in
     };
     embedded.enable = true;
     eove.enable = true;
+    network = {
+      nmap.enable = true;
+      wireshark.enable = true;
+    };
   };
 
   imports = [

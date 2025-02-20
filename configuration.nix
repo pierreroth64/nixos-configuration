@@ -59,7 +59,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    vim-full  # full for clipboard support
+    vim-full # full for clipboard support
     git
     wget
     curl
