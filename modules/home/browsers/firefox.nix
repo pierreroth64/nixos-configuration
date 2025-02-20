@@ -10,6 +10,7 @@ let
   extensions = [
     {
       shortId = "ublock-origin";
+      uuid = "uBlock0@raymondhill.net";
     }
   ];
   mkEnableExtensionOption =
@@ -18,7 +19,15 @@ let
       name = e.shortId;
       value = lib.mkEnableOption "enable firefox browser extension ${e.shortId} for ${userName}";
     };
-
+  mkExtension =
+    with builtins;
+    e: {
+      name = e.uuid;
+      value = {
+        install_url = "https://addons.mozilla.org/en-US/firefox/downloads/latest/${e.shortId}/latest.xpi";
+        installation_mode = "normal_installed";
+      };
+    };
 in
 {
   options = {
@@ -42,6 +51,7 @@ in
           DisablePocket = true;
           DisableFirefoxAccounts = true;
           DisableAccounts = true;
+          ExtensionSettings = with builtins; listToAttrs (map (e: mkExtension e) extensions);
         };
       };
     };
