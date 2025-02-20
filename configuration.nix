@@ -61,6 +61,8 @@
   environment.systemPackages = with pkgs; [
     vim
     git
+    wget
+    curl
   ];
 
   # This value determines the NixOS release from which the default
