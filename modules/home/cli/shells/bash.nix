@@ -19,6 +19,7 @@ in
       eval "$(starship init bash)"
       eval "$(direnv hook bash)"
       eval "$(zoxide init bash)"
+      eval "$(thefuck --alias)"
     '';
 
     home-manager.users.${userName}.programs = {

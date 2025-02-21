@@ -9,6 +9,7 @@
 {
   home-manager.users.${userName} = {
     programs = {
+      thefuck.enable = true;
       kitty.enable = true;
       yazi.enable = true;
       btop.enable = true;

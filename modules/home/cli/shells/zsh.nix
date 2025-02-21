@@ -18,6 +18,7 @@ in
       eval "$(starship init zsh)"
       eval "$(direnv hook zsh)"
       eval "$(zoxide init zsh)"
+      eval "$(thefuck --alias)"
     '';
 
     home-manager.users.${userName} = {
