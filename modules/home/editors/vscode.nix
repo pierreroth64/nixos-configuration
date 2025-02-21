@@ -18,6 +18,11 @@ in
       home.packages = with pkgs.unstable; [
         vscode
       ];
+
+      programs.vscode.extensions = with pkgs.vscode-extensions; [
+        jnoortheen.nix-ide
+      ];
+
       programs.vscode.keybindings = [
         {
           key = "Ctrl + PageUp";
