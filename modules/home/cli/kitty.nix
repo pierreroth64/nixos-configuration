@@ -19,7 +19,7 @@ in
             "${modifier}+LEFT" = "previous_tab";
             "${modifier}+RIGHT" = "next_tab";
             "${modifier}+w" = "close_window";
-            "${modifier}+k" = "clear_terminal";
+            "${modifier}+k" = "clear_terminal scrollback active";
             "${modifier}+ENTER" = "toggle_maximized";
             "${modifier}+UP" = "scroll_line_up";
             "${modifier}+DOWN" = "scroll_line_down";
