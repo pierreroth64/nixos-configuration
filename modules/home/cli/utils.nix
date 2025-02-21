@@ -16,13 +16,7 @@ in
   config = lib.mkIf cfg.utils.enable {
     home-manager.users.${userName} = {
       programs = {
-        kitty = {
-          enable = true;
-          font = {
-            name = lib.mkForce "FiraCode Nerd Font Mono";
-            size = lib.mkForce 11.0;
-          };
-        };
+        kitty.enable = true;
         yazi.enable = true;
         btop.enable = true;
         ripgrep.enable = true;
