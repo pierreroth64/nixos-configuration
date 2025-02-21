@@ -20,7 +20,7 @@ in
   users.groups.i2c.members = [ myuser.userName ];
 
   # you just have to toggle these flags to enable/disable a module for this user
-  my.peio = {
+  my.${myuser.userName} = {
     cli = {
       git.enable = true;
       docker.enable = true;
