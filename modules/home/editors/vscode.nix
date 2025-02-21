@@ -21,6 +21,7 @@ in
 
       programs.vscode.extensions = with pkgs.vscode-extensions; [
         jnoortheen.nix-ide
+        streetsidesoftware.code-spell-checker
       ];
 
       programs.vscode.keybindings = [
@@ -33,6 +34,11 @@ in
           command = "editor.action.moveLinesDownAction";
         }
       ];
+
+      userSettings = {
+        "nix.formatterPath" = "nixfmt";
+        "cSpell.language" = "en,fr";
+      };
     };
   };
 }
