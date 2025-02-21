@@ -19,7 +19,7 @@ in
   users.groups.plugdev.members = [ myuser.userName ];
   users.groups.i2c.members = [ myuser.userName ];
 
-  # you just have to toggle these flags to enable/disable a module for this user
+  # you just have to toggle these flags to enable/disable packages for this user
   my.${myuser.userName} = {
     cli = {
       git.enable = true;
