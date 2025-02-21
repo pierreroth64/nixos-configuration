@@ -25,8 +25,8 @@ in
             "${modifier}+DOWN" = "scroll_line_down";
             "shift+${modifier}+UP" = "scroll_page_up";
             "shift+${modifier}+DOWN" = "scroll_page_down";
-            "${modifier}+=" = " change_font_size all +2.0";
-            "${modifier}+-" = " change_font_size all -2.0";
+            "${modifier}+=" = "change_font_size all +1.0";
+            "${modifier}+-" = "change_font_size all -1.0";
         };
       };
     };
