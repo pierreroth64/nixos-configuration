@@ -24,7 +24,6 @@ in
     cli = {
       git.enable = true;
       docker.enable = true;
-      utils.enable = true;
       shells.bash.enable = true;
       shells.zsh.enable = true;
     };
