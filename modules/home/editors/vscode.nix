@@ -19,25 +19,27 @@ in
         vscode
       ];
 
-      programs.vscode.extensions = with pkgs.vscode-extensions; [
-        jnoortheen.nix-ide
-        streetsidesoftware.code-spell-checker
-      ];
+      programs.vscode = {
+        extensions = with pkgs.vscode-extensions; [
+          jnoortheen.nix-ide
+          streetsidesoftware.code-spell-checker
+        ];
 
-      programs.vscode.keybindings = [
-        {
-          key = "Ctrl + PageUp";
-          command = "editor.action.moveLinesUpAction";
-        }
-        {
-          key = "Ctrl + PageDown";
-          command = "editor.action.moveLinesDownAction";
-        }
-      ];
+        keybindings = [
+          {
+            key = "Ctrl + PageUp";
+            command = "editor.action.moveLinesUpAction";
+          }
+          {
+            key = "Ctrl + PageDown";
+            command = "editor.action.moveLinesDownAction";
+          }
+        ];
 
-      userSettings = {
-        "nix.formatterPath" = "nixfmt";
-        "cSpell.language" = "en,fr";
+        userSettings = {
+          "nix.formatterPath" = "nixfmt";
+          "cSpell.language" = "en,fr";
+        };
       };
     };
   };
