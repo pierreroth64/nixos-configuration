@@ -1,5 +1,7 @@
 ## my nixos configuration
 
+[![check](https://github.com/pierreroth64/nixos-configuration/actions/workflows/check.yml/badge.svg)](https://github.com/pierreroth64/nixos-configuration/actions/workflows/check.yml)
+
 ### Disclaimer
 
 You may find complex nixos configurations on the Internet.
