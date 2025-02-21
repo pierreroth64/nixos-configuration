@@ -17,6 +17,7 @@ in
 
     programs.bash.interactiveShellInit = ''
       eval "$(starship init bash)"
+      eval "$(direnv hook bash)"
     '';
 
     home-manager.users.${userName}.programs = {

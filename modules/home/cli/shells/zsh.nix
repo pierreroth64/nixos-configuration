@@ -16,6 +16,7 @@ in
   config = lib.mkIf cfg.zsh.enable {
     programs.zsh.interactiveShellInit = ''
       eval "$(starship init zsh)"
+      eval "$(direnv hook zsh)"
     '';
 
     home-manager.users.${userName} = {
