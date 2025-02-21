@@ -17,6 +17,7 @@ in
     programs.zsh.interactiveShellInit = ''
       eval "$(starship init zsh)"
       eval "$(direnv hook zsh)"
+      eval "$(zoxide init zsh)"
     '';
 
     home-manager.users.${userName} = {

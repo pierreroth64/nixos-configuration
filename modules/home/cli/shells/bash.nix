@@ -18,6 +18,7 @@ in
     programs.bash.interactiveShellInit = ''
       eval "$(starship init bash)"
       eval "$(direnv hook bash)"
+      eval "$(zoxide init bash)"
     '';
 
     home-manager.users.${userName}.programs = {
