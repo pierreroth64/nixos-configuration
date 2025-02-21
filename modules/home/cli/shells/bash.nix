@@ -1,4 +1,4 @@
-{ userName, ... }:
+{ userName, userCLIEditor, ... }:
 {
   pkgs,
   lib,
@@ -23,7 +23,7 @@ in
       bash = {
         enable = true;
         sessionVariables = {
-          EDITOR = "vim";
+          EDITOR = userCLIEditor;
         };
       };
     };

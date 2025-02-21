@@ -3,6 +3,7 @@ let
   myuser = {
     userName = "peio";
     userEmail = "pierreroth64@gmail.com";
+    userCLIEditor = "vim";
   };
 in
 {
