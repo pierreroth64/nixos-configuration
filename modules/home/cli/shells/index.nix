@@ -12,7 +12,7 @@ let
     in
     {
       cat = "bat";
-      top = "btop";
+      top = "btm";
       ".." = "cd ..";
       "..." = "cd ../..";
       ls = "${newls}";

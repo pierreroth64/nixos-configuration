@@ -12,6 +12,7 @@
       thefuck.enable = true;
       yazi.enable = true;
       btop.enable = true;
+      bottom.enable = true;
       ripgrep.enable = true;
       fzf.enable = true;
       eza.enable = true;
