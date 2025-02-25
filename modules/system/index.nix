@@ -2,6 +2,7 @@
 {
   imports = [
     ./git.nix
+    ./dua.nix
     ./crypto.nix
     ./udev.nix
     ./starship.nix
