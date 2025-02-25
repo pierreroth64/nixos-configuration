@@ -35,18 +35,8 @@ in
             "when" = "editorTextFocus && !editorReadonly";
           }
           {
-            "key" = "alt+up";
-            "command" = "-editor.action.moveLinesUpAction";
-            "when" = "editorTextFocus && !editorReadonly";
-          }
-          {
             "key" = "shift+alt+down";
             "command" = "editor.action.moveLinesDownAction";
-            "when" = "editorTextFocus && !editorReadonly";
-          }
-          {
-            "key" = "alt+down";
-            "command" = "-editor.action.moveLinesDownAction";
             "when" = "editorTextFocus && !editorReadonly";
           }
           {
@@ -99,11 +89,6 @@ in
             "when" = "editorTextFocus";
           }
           {
-            "key" = "shift+alt+up";
-            "command" = "-editor.action.insertCursorAbove";
-            "when" = "editorTextFocus";
-          }
-          {
             "key" = "shift+alt+l";
             "command" = "editor.action.copyLinesDownAction";
             "when" = "editorTextFocus && !editorReadonly";
@@ -111,11 +96,6 @@ in
           {
             "key" = "shift+alt+right";
             "command" = "cursorEndSelect";
-            "when" = "textInputFocus";
-          }
-          {
-            "key" = "shift+end";
-            "command" = "-cursorEndSelect";
             "when" = "textInputFocus";
           }
           {
@@ -178,22 +158,8 @@ in
             "command" = "workbench.action.files.newUntitledFile";
           }
           {
-            "key" = "end";
-            "command" = "-editor.action.goToBottomHover";
-            "when" = "editorHoverFocused";
-          }
-          {
             "key" = "alt+g";
             "command" = "workbench.action.gotoLine";
-          }
-          {
-            "key" = "home";
-            "command" = "-editor.action.goToTopHover";
-            "when" = "editorHoverFocused";
-          }
-          {
-            "key" = "shift+insert";
-            "command" = "-editor.action.clipboardPasteAction";
           }
           {
             "key" = "shift+alt+f";
