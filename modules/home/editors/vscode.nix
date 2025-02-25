@@ -16,10 +16,6 @@ in
   config = lib.mkIf cfg.vscode.enable {
 
     home-manager.users.${userName} = {
-      home.packages = with pkgs.unstable; [
-        vscode
-      ];
-
       programs.vscode = {
         enable = true;
         extensions = with pkgs.vscode-extensions; [
