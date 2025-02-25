@@ -58,6 +58,9 @@ in
       nmap.enable = true;
       wireshark.enable = true;
     };
+    gaming = {
+      steam.enable = true;
+    };
   };
 
   imports = [
