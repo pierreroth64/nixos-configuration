@@ -24,8 +24,11 @@ in
     cli = {
       git.enable = true;
       docker.enable = true;
-      shells.bash.enable = true;
-      shells.zsh.enable = true;
+      shells = {
+        bash.enable = false;
+        zsh.enable = false;
+        fish.enable = true;
+      };
     };
     browsers = {
       brave.enable = false;

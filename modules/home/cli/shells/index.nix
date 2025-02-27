@@ -6,27 +6,19 @@
   ...
 }:
 let
-  shellAliases =
-    let
-      newls = "eza --git --header --icons";
-    in
-    {
-      cat = "bat";
-      top = "btm";
-      ".." = "cd ..";
-      "..." = "cd ../..";
-      ls = "${newls}";
-      ll = "${newls} -l";
-      la = "${newls} -a";
-      lla = "${newls} -la";
-      tree = "${newls} --tree";
-      man = "batman";
-      grep = "batgrep";
-    };
+  shellAliases = {
+    cat = "bat";
+    top = "btm";
+    ".." = "cd ..";
+    "..." = "cd ../..";
+    man = "batman";
+    grep = "batgrep";
+  };
 in
 {
   imports = [
     (import ./bash.nix user)
+    (import ./fish.nix user)
     (import ./zsh.nix user)
   ];
 

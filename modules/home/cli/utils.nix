@@ -15,7 +15,11 @@
       bottom.enable = true;
       ripgrep.enable = true;
       fzf.enable = true;
-      eza.enable = true;
+      eza = {
+        enable = true;
+        icons = "always";
+        colors = "always";
+      };
       zoxide = {
         enable = true;
         options = [ "--cmd cd" ];
