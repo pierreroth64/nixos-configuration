@@ -4,11 +4,13 @@ let
     userName = "peio";
     userEmail = "pierreroth64@gmail.com";
     userCLIEditor = "vim";
+    userShell = "fish";
   };
 in
 {
   users.users.${myuser.userName} = {
     isNormalUser = true;
+    shell = pkgs.${myuser.userShell};
     description = myuser.userName;
     extraGroups = [
       "networkmanager"
@@ -25,9 +27,7 @@ in
       git.enable = true;
       docker.enable = true;
       shells = {
-        bash.enable = false;
-        zsh.enable = false;
-        fish.enable = true;
+        ${myuser.userShell}.enable = true;
       };
     };
     browsers = {
