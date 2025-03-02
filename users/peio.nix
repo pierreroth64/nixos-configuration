@@ -50,7 +50,6 @@ in
     };
     currencies = {
       ledger.enable = true;
-      cointop.enable = true;
     };
     media = {
       spotify.enable = true;
