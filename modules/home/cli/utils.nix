@@ -9,6 +9,7 @@
 {
   home-manager.users.${userName} = {
     programs = {
+      command-not-found.enable = false;
       thefuck.enable = true;
       yazi.enable = true;
       btop.enable = true;
