@@ -20,7 +20,6 @@ in
         enable = true;
         extensions = with pkgs.vscode-extensions; [
           jnoortheen.nix-ide
-          streetsidesoftware.code-spell-checker
         ];
 
         userSettings = {
