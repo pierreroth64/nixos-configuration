@@ -11,7 +11,12 @@
     programs = {
       command-not-found.enable = false;
       thefuck.enable = true;
-      yazi.enable = true;
+      yazi = {
+        enable = true;
+        enableBashIntegration = true;
+        enableFishIntegration = true;
+        enableZshIntegration = true;
+      };
       btop.enable = true;
       bottom.enable = true;
       ripgrep.enable = true;
