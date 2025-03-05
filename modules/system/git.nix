@@ -5,6 +5,7 @@
       git
       gitFull
       gitui
+      lazygit
       git-subrepo
       git-extras
     ];
