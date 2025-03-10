@@ -24,8 +24,6 @@ in
 
         userSettings = {
           "nix.formatterPath" = "nixfmt";
-          "cSpell.language" = "en,fr";
-
         };
         keybindings = [
           {
@@ -104,11 +102,6 @@ in
           {
             "key" = "alt+right";
             "command" = "cursorEnd";
-            "when" = "textInputFocus";
-          }
-          {
-            "key" = "end";
-            "command" = "-cursorEnd";
             "when" = "textInputFocus";
           }
           {
