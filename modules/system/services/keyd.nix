@@ -7,7 +7,7 @@
       default = {
         settings = {
           main = {
-            leftalt = "leftctrl";
+            leftalt = "super";
           };
         };
       };
