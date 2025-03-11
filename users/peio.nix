@@ -63,6 +63,7 @@ in
     };
     gaming = {
       steam.enable = true;
+      bottles.enable = true;
     };
   };
 
