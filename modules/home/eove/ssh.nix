@@ -14,10 +14,8 @@ in
     home-manager.users.${userName} = {
       programs.ssh = {
         enable = true;
+        extraConfig = "verifyHostKeyDNS = yes";
         matchBlocks = {
-          #"*" = {
-          #  verifyHostKeyDNS = "yes";
-          #};
           "github.com" = {
             identityFile = "~/.ssh/id_ed25519";
           };
