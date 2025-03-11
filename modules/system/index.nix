@@ -7,5 +7,6 @@
     ./udev.nix
     ./starship.nix
     ./stylix.nix
+    ./services/index.nix
   ];
 }
