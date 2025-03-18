@@ -44,7 +44,10 @@
   };
 
   console.keyMap = "fr";
-  services.libinput.touchpad.disableWhileTyping = true;
+  services.libinput = {
+    touchpad.disableWhileTyping = true;
+    mouse.disableWhileTyping = true;
+  };
 
   services.printing.enable = true;
 
