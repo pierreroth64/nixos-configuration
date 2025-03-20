@@ -8,6 +8,7 @@
       lazygit
       git-subrepo
       git-extras
+      gource
     ];
   };
 }
