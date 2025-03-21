@@ -18,6 +18,10 @@ in
       enable = true;
       inherit userName;
       inherit userEmail;
+      signing = {
+        signByDefault = true;
+        key = "7E725B9260A593AF4906EACA4C19194F76882D47";
+      };
       aliases = {
         co = "checkout";
         ci = "commit";
