@@ -8,5 +8,6 @@
     ./starship.nix
     ./stylix.nix
     ./services/index.nix
+    ./zip.nix
   ];
 }
