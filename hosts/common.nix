@@ -8,7 +8,7 @@
 {
   imports = [
     inputs.home-manager.nixosModules.default
-    ./modules/system/index.nix
+    ../modules/system/index.nix
   ];
 
   home-manager.backupFileExtension = "backup";

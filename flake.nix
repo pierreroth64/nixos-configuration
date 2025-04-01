@@ -54,8 +54,8 @@
           { nixpkgs.overlays = [ (final: prev: { inherit unstable; }) ]; }
           ./hardware/scanned/hardware-framework13.nix
           ./hardware/index.nix
+          ./hosts/common.nix
           ./hosts/adara.nix
-          ./configuration.nix
           inputs.home-manager.nixosModules.default
           inputs.stylix.nixosModules.stylix
           {
