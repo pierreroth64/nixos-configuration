@@ -8,10 +8,10 @@
 let
   myuser = {
     userName = "test";
+    userPassword = "test";
     userEmail = "pierreroth64@gmail.com";
     userCLIEditor = "vim";
     userShell = "fish";
-    userPassword = "test";
     userExtraGroups = [
       "networkmanager"
       "wheel"

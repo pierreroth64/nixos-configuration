@@ -8,6 +8,7 @@
 let
   myuser = {
     userName = "peio";
+    userPassword = "";
     userEmail = "pierreroth64@gmail.com";
     userCLIEditor = "vim";
     userShell = "fish";
