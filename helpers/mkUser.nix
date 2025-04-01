@@ -66,7 +66,7 @@
   };
 
   imports = [
-    (import ../../modules/home/index.nix myuser)
+    (import ../modules/home/index.nix myuser)
   ];
 
   home-manager = {

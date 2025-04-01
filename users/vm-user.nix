@@ -18,7 +18,7 @@ let
       "dialout"
     ];
   };
-  mkUser = import ./helpers/mkUser.nix {
+  mkUser = import ../helpers/mkUser.nix {
     inherit
       pkgs
       inputs

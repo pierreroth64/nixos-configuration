@@ -41,6 +41,14 @@
           "*.{conf,ini}"
         ];
       };
+      mkOs = import ./helpers/mkOs.nix {
+        inherit
+          inputs
+          lib
+          pkgs
+          unstable
+          ;
+      };
     in
     {
       formatter.${system} = treefmt-nix.lib.mkWrapper pkgs treefmt-config;
@@ -48,42 +56,14 @@
         formatting = (treefmt-nix.lib.evalModule pkgs treefmt-config).config.build.check self;
       };
 
-      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          { nixpkgs.overlays = [ (final: prev: { inherit unstable; }) ]; }
-          ./hardware/scanned/hardware-framework13.nix
-          ./hardware/index.nix
-          ./hosts/common.nix
-          ./hosts/adara.nix
-          inputs.home-manager.nixosModules.default
-          inputs.stylix.nixosModules.stylix
-          {
-            home-manager = {
-              useUserPackages = true;
-              useGlobalPkgs = true;
-            };
-          }
-        ];
+      nixosConfigurations.default = mkOs {
+        machine = "framework13";
+        host = "adara";
       };
 
-      nixosConfigurations.vm = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          { nixpkgs.overlays = [ (final: prev: { inherit unstable; }) ]; }
-          ./hardware/scanned/hardware-framework13.nix
-          ./hardware/index.nix
-          ./hosts/common.nix
-          ./hosts/adara-vm.nix
-          inputs.home-manager.nixosModules.default
-          inputs.stylix.nixosModules.stylix
-          {
-            home-manager = {
-              useUserPackages = true;
-              useGlobalPkgs = true;
-            };
-          }
-        ];
+      nixosConfigurations.vm = mkOs {
+        machine = "framework13";
+        host = "adara-vm";
       };
     };
 }

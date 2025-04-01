@@ -7,7 +7,7 @@
 
 {
   imports = [
-    ../users/all.nix # you can import all users or select some of them
+    ../users/peio.nix
   ];
 
   networking = {
