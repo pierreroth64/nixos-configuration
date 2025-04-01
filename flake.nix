@@ -66,5 +66,24 @@
           }
         ];
       };
+
+      nixosConfigurations.vm = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          { nixpkgs.overlays = [ (final: prev: { inherit unstable; }) ]; }
+          ./hardware/scanned/hardware-framework13.nix
+          ./hardware/index.nix
+          ./hosts/common.nix
+          ./hosts/adara-vm.nix
+          inputs.home-manager.nixosModules.default
+          inputs.stylix.nixosModules.stylix
+          {
+            home-manager = {
+              useUserPackages = true;
+              useGlobalPkgs = true;
+            };
+          }
+        ];
+      };
     };
 }
