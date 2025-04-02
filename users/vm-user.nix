@@ -15,6 +15,7 @@ let
     userExtraGroups = [ ];
     userSSHIdentityFile = "";
     userSSHIdentitySecondaryFile = "";
+    userGPGPublicKey = "";
   };
   mkUser = import ../helpers/mkUser.nix {
     inherit
