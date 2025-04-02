@@ -1,6 +1,6 @@
 ## my nixos configuration
 
-[![check](https://github.com/pierreroth64/nixos-configuration/actions/workflows/check.yml/badge.svg)](https://github.com/pierreroth64/nixos-configuration/actions/workflows/check.yml)
+[![CI](https://github.com/pierreroth64/nixos-configuration/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/pierreroth64/nixos-configuration/actions/workflows/ci.yml)
 
 ### Disclaimer
 
