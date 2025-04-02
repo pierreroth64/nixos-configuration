@@ -17,7 +17,6 @@ let
 in
 {
   imports = [
-    (import ./bash.nix user)
     (import ./fish.nix user)
     (import ./zsh.nix user)
   ];
