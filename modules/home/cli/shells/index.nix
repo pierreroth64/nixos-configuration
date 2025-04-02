@@ -1,4 +1,4 @@
-{ userName, ... }@user:
+{ userName, userCLIEditor, ... }@user:
 {
   pkgs,
   lib,
@@ -26,6 +26,9 @@ in
     home-manager.users.${userName} = {
       home = {
         inherit shellAliases;
+        sessionVariables = {
+          EDITOR = userCLIEditor;
+        };
       };
     };
   };

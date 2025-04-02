@@ -1,4 +1,4 @@
-{ userName, userCLIEditor, ... }:
+{ userName, ... }:
 {
   pkgs,
   lib,
@@ -33,7 +33,6 @@ in
             lla = "eza -la";
             tree = "eza --tree";
           };
-
         };
       };
     };

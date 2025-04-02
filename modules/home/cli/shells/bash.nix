@@ -1,4 +1,4 @@
-{ userName, userCLIEditor, ... }:
+{ userName, ... }:
 {
   pkgs,
   lib,
@@ -25,9 +25,6 @@ in
     home-manager.users.${userName}.programs = {
       bash = {
         enable = true;
-        sessionVariables = {
-          EDITOR = userCLIEditor;
-        };
       };
     };
   };
