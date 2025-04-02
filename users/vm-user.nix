@@ -16,6 +16,9 @@ let
     userSSHIdentityFile = "";
     userSSHIdentitySecondaryFile = "";
     userGPGPublicKey = "";
+    userFeatureFlags = { 
+      eove.enable = false;
+    };
   };
   mkUser = import ../helpers/mkUser.nix {
     inherit
