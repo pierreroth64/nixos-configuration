@@ -1,4 +1,9 @@
-{ userName, ... }:
+{
+  userName,
+  userSSHIdentityFile,
+  userSSHIdentitySecondaryFile,
+  ...
+}:
 {
   pkgs,
   lib,
@@ -17,15 +22,15 @@ in
         extraConfig = "verifyHostKeyDNS = yes";
         matchBlocks = {
           "github.com" = {
-            identityFile = "~/.ssh/id_ed25519";
+            identityFile = userSSHIdentityFile;
           };
           "remote-access" = {
-            identityFile = "~/.ssh/id_ed25519";
+            identityFile = userSSHIdentityFile;
             hostname = "remote-access.eove.fr";
             user = "root";
           };
           "remote-access-rsa" = {
-            identityFile = "~/.ssh/id_rsa";
+            identityFile = userSSHIdentitySecondaryFile;
             hostname = "remote-access.eove.fr";
             user = "root";
           };
@@ -34,11 +39,6 @@ in
             port = 1111;
             proxyJump = "remote-access";
             user = "testlab";
-          };
-          "github-runner-via-remoteaccess" = {
-            hostname = "github-runner.eove.fr";
-            user = "eove";
-            proxyJump = "wall-e-via-re;moteaccess";
           };
           "cq-el-26-via-remoteaccess" = {
             hostname = "localhost";

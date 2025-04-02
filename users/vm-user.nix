@@ -17,6 +17,8 @@ let
       "wheel"
       "dialout"
     ];
+    userSSHIdentityFile = "";
+    userSSHIdentitySecondaryFile = "";
   };
   mkUser = import ../helpers/mkUser.nix {
     inherit

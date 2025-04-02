@@ -17,6 +17,8 @@ let
       "wheel"
       "dialout"
     ];
+    userSSHIdentityFile = "~/.ssh/id_ed25519";
+    userSSHIdentitySecondaryFile = "~/.ssh/id_rsa";
   };
   mkUser = import ../helpers/mkUser.nix {
     inherit
