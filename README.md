@@ -27,5 +27,5 @@ For example, my sons do not care (yet) about programming. Why then exposing them
 
 - To rebuild and switch to the new generation: `sudo nixos-rebuild switch --flake .#default` (rebooting will be changes)
 - To rebuild and test live: `sudo nixos-rebuild test --flake .#default`
- (rebooting will discard changes)
+  (rebooting will discard changes)
 - To test in a virtual machine: `./test-vm.sh`
