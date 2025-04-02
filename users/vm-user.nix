@@ -12,11 +12,7 @@ let
     userEmail = "test@gmail.com";
     userCLIEditor = "vim";
     userShell = "fish";
-    userExtraGroups = [
-      "networkmanager"
-      "wheel"
-      "dialout"
-    ];
+    userExtraGroups = [ ];
     userSSHIdentityFile = "";
     userSSHIdentitySecondaryFile = "";
   };

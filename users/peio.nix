@@ -12,11 +12,7 @@ let
     userEmail = "pierreroth64@gmail.com";
     userCLIEditor = "vim";
     userShell = "fish";
-    userExtraGroups = [
-      "networkmanager"
-      "wheel"
-      "dialout"
-    ];
+    userExtraGroups = [ ];
     userSSHIdentityFile = "~/.ssh/id_ed25519";
     userSSHIdentitySecondaryFile = "~/.ssh/id_rsa";
   };

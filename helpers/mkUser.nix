@@ -12,7 +12,11 @@
     shell = pkgs.${myuser.userShell};
     password = lib.mkIf (myuser.userPassword != "") myuser.userPassword;
     description = myuser.userName;
-    extraGroups = myuser.userExtraGroups;
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "dialout"
+    ] ++ myuser.userExtraGroups;
   };
 
   users.groups.plugdev.members = [ myuser.userName ];
