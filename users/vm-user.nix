@@ -16,7 +16,7 @@ let
     userSSHIdentityFile = "";
     userSSHIdentitySecondaryFile = "";
     userGPGPublicKey = "";
-    userFeatureFlags = { 
+    userFeatureFlags = {
       eove.enable = false;
     };
   };
