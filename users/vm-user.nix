@@ -17,7 +17,7 @@ let
     userSSHIdentitySecondaryFile = "";
     userGPGPublicKey = "";
     userFeatureFlags = {
-      eove.enable = false;
+      eove.enable = lib.mkForce false;
     };
   };
   mkUser = import ../helpers/mkUser.nix {

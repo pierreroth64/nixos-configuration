@@ -18,9 +18,9 @@ let
     userGPGPublicKey = "7E725B9260A593AF4906EACA4C19194F76882D47";
     userFeatureFlags = {
       currencies = {
-        ledger.enable = true;
+        ledger.enable = lib.mkForce true;
       };
-      eove.enable = true;
+      eove.enable = lib.mkForce true;
     };
   };
   mkUser = import ../helpers/mkUser.nix {

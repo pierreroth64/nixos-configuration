@@ -59,7 +59,7 @@
         vlc.enable = true;
       };
       embedded.enable = true;
-      eove.enable = true;
+      eove.enable = false;
       network = {
         nmap.enable = true;
         wireshark.enable = true;
