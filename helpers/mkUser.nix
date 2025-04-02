@@ -15,9 +15,8 @@
     extraGroups = myuser.userExtraGroups;
   };
 
-  # FIXME: i would like to append my user to some groups
-  # users.groups.plugdev.members = config.users.groups.plugdev.members ++ [ myuser.userName ];
-  # users.groups.i2cmembers = config.users.groups.i2c.members ++ [ myuser.userName ];
+  users.groups.plugdev.members = [ myuser.userName ];
+  users.groups.i2c.members = [ myuser.userName ];
 
   # you just have to toggle these flags to enable/disable packages for this user
   my.${myuser.userName} = {

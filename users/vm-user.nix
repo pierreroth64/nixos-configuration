@@ -9,7 +9,7 @@ let
   myuser = {
     userName = "test";
     userPassword = "test";
-    userEmail = "pierreroth64@gmail.com";
+    userEmail = "test@gmail.com";
     userCLIEditor = "vim";
     userShell = "fish";
     userExtraGroups = [
