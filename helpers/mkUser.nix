@@ -6,6 +6,52 @@
   ...
 }:
 { myuser }:
+let
+  defaultFeatureFlags = {
+    cli = {
+      git.enable = true;
+      docker.enable = true;
+      shells = {
+        ${myuser.userShell}.enable = true;
+      };
+    };
+    browsers = {
+      brave.enable = false;
+      chromium.enable = false;
+      firefox = {
+        enable = true;
+        extensions.ublock-origin.enable = true;
+      };
+    };
+    editors = {
+      vscode.enable = true;
+    };
+    office = {
+      libreoffice.enable = true;
+    };
+    chat = {
+      slack.enable = true;
+      whatsapp.enable = true;
+    };
+    currencies = {
+      ledger.enable = false;
+    };
+    media = {
+      spotify.enable = true;
+      vlc.enable = true;
+    };
+    embedded.enable = true;
+    eove.enable = false;
+    network = {
+      nmap.enable = true;
+      wireshark.enable = true;
+    };
+    gaming = {
+      steam.enable = true;
+      bottles.enable = true;
+    };
+  };
+in
 {
   users.users.${myuser.userName} = {
     isNormalUser = true;
@@ -22,53 +68,10 @@
   users.groups.plugdev.members = [ myuser.userName ];
   users.groups.i2c.members = [ myuser.userName ];
 
-  # you can overwrite these flags from your user declaration
+  # you can overwrite default flags from your user declaration
   my.${myuser.userName} = lib.mkMerge [
     myuser.userFeatureFlags
-    {
-      cli = {
-        git.enable = true;
-        docker.enable = true;
-        shells = {
-          ${myuser.userShell}.enable = true;
-        };
-      };
-      browsers = {
-        brave.enable = false;
-        chromium.enable = false;
-        firefox = {
-          enable = true;
-          extensions.ublock-origin.enable = true;
-        };
-      };
-      editors = {
-        vscode.enable = true;
-      };
-      office = {
-        libreoffice.enable = true;
-      };
-      chat = {
-        slack.enable = true;
-        whatsapp.enable = true;
-      };
-      currencies = {
-        ledger.enable = false;
-      };
-      media = {
-        spotify.enable = true;
-        vlc.enable = true;
-      };
-      embedded.enable = true;
-      eove.enable = false;
-      network = {
-        nmap.enable = true;
-        wireshark.enable = true;
-      };
-      gaming = {
-        steam.enable = true;
-        bottles.enable = true;
-      };
-    }
+    defaultFeatureFlags
   ];
 
   imports = [
