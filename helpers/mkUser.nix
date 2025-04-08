@@ -16,6 +16,7 @@ let
       };
     };
     browsers = {
+      default = "firefox";
       brave.enable = false;
       chromium.enable = false;
       firefox = {
@@ -84,6 +85,12 @@ in
       home.username = myuser.userName;
       home.homeDirectory = "/home/${myuser.userName}";
       home.stateVersion = "24.11";
+      xdg = {
+        enable = true;
+        mimeApps.defaultApplications = {
+          "application/pdf" = config.my.${myuser.userName}."browsers.default"."desktop";
+        };
+      };
     };
   };
 }
