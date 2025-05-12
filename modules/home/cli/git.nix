@@ -30,6 +30,7 @@ in
       aliases = {
         co = "checkout";
         ci = "commit";
+        br = "branch";
         ds = "diff --staged";
         st = "status -sb";
         unstage = "reset HEAD --";
