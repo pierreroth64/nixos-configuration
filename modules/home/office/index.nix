@@ -7,6 +7,7 @@
 }:
 {
   imports = [
+    (import ./gimp.nix user)
     (import ./libreoffice.nix user)
   ];
 }

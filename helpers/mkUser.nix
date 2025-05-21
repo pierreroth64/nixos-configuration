@@ -29,6 +29,7 @@ let
     };
     office = {
       libreoffice.enable = true;
+      gimp.enable = true;
     };
     chat = {
       slack.enable = true;
