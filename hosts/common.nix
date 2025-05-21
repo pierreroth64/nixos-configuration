@@ -45,7 +45,10 @@
 
   console.keyMap = "fr";
   services.libinput = {
-    touchpad.disableWhileTyping = true;
+    touchpad = {
+      tapping = false;
+      disableWhileTyping = true;
+    };
     mouse = {
       tapping = false;
       disableWhileTyping = true;
