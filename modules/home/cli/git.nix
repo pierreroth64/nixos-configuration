@@ -35,7 +35,7 @@ in
         st = "status -sb";
         unstage = "reset HEAD --";
         untrack = "rm --cached";
-        ls = "log --graph --pretty=format:'%C(yellow)%h %C(blue)%ad %C(red)%d %C(reset)%s %C(green)[%an]' --decorate --date=short";
+        ls = "log --pretty=format:'%C(yellow)%h %C(blue)%ad %C(red)%d %C(reset)%s %C(green)[%an]' --decorate --date=short";
       };
       extraConfig = {
         pull = {
