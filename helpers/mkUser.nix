@@ -41,6 +41,7 @@ let
     media = {
       spotify.enable = true;
       vlc.enable = true;
+      ffmpeg.enable = true;
     };
     embedded.enable = true;
     eove.enable = false;
