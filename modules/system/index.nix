@@ -2,6 +2,7 @@
 {
   imports = [
     ./bash.nix
+    ./cli.nix
     ./git.nix
     ./dua.nix
     ./crypto.nix
