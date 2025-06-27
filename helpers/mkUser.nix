@@ -26,6 +26,7 @@ let
     };
     editors = {
       vscode.enable = true;
+      android-studio.enable = true;
     };
     office = {
       libreoffice.enable = true;

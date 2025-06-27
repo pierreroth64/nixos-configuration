@@ -7,6 +7,7 @@
 }:
 {
   imports = [
+    (import ./android-studio.nix user)
     (import ./vscode.nix user)
   ];
 }
