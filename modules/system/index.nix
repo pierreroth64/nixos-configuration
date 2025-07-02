@@ -1,15 +1,16 @@
 { pkgs, ... }:
 {
   imports = [
+    ./services/index.nix
     ./bash.nix
     ./cli.nix
     ./git.nix
     ./dua.nix
     ./crypto.nix
-    ./udev.nix
     ./starship.nix
     ./stylix.nix
-    ./services/index.nix
+    ./udev.nix
+    ./utils.nix
     ./zip.nix
   ];
 }
