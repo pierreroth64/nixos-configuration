@@ -6,7 +6,7 @@
   ...
 }@args:
 let
-  myuser = {
+  myuser = rec {
     userName = "peio";
     userPassword = "";
     userEmail = "pierreroth64@gmail.com";
@@ -22,6 +22,7 @@ let
       };
       eove.enable = lib.mkForce true;
     };
+    userGithubToken = config.sops.placeholder."users/${userName}/github/token";
   };
   mkUser = import ../helpers/mkUser.nix {
     inherit

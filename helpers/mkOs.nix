@@ -19,6 +19,7 @@ nixpkgs.lib.nixosSystem {
     ../hosts/${host}.nix
     inputs.home-manager.nixosModules.default
     inputs.stylix.nixosModules.stylix
+    inputs.sops-nix.nixosModules.sops
     {
       home-manager = {
         useUserPackages = true;

@@ -10,6 +10,10 @@
     };
     treefmt-nix.url = "github:numtide/treefmt-nix";
     stylix.url = "github:danth/stylix/release-24.11";
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

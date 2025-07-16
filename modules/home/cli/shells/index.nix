@@ -1,4 +1,4 @@
-{ userName, userCLIEditor, ... }@user:
+{ userName, userCLIEditor, userGithubToken, ... }@user:
 {
   pkgs,
   lib,
@@ -27,6 +27,7 @@ in
         inherit shellAliases;
         sessionVariables = {
           EDITOR = userCLIEditor;
+          GITHUB_TOKEN = userGithubToken;
         };
       };
     };

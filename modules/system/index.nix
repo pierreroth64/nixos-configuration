@@ -5,6 +5,7 @@
     ./bash.nix
     ./cli.nix
     ./git.nix
+    ./sops.nix
     ./dua.nix
     ./crypto.nix
     ./starship.nix
