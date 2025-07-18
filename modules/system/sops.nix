@@ -9,7 +9,7 @@
     inputs.sops-nix.nixosModules.sops
   ];
 
-  sops.defaultSopsFile = ../../secrets/secrets.yaml;
+  sops.defaultSopsFile = ../../secrets/secrets.json;
   sops.defaultSopsFormat = "yaml";
   sops.age.keyFile = "/home/peio/.config/sops/age/keys.txt";
   sops.secrets."users/peio/github/token" = {
