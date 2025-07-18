@@ -8,6 +8,7 @@
 {
   imports = [
     ../users/vm-user.nix
+    ../users/peio.nix
   ];
 
   networking = {
