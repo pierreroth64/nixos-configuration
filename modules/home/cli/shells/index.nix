@@ -1,4 +1,9 @@
-{ userName, userCLIEditor, userGithubToken, ... }@user:
+{
+  userName,
+  userCLIEditor,
+  userGithubToken,
+  ...
+}@user:
 {
   pkgs,
   lib,
