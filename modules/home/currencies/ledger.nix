@@ -17,5 +17,6 @@ in
     home-manager.users.${userName}.home.packages = with pkgs.unstable; [
       ledger-live-desktop
     ];
+    hardware.ledger.enable = true;
   };
 }
