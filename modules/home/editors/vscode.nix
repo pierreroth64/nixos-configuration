@@ -27,12 +27,22 @@ in
         };
         keybindings = [
           {
-            "key" = "shift+alt+up";
+            "key" = "ctrl+alt+up";
+            "command" = "editor.action.goToTopHover";
+            "when" = "editorHoverFocused";
+          }
+          {
+            "key" = "ctrl+alt+down";
+            "command" = "editor.action.goToBottomHover";
+            "when" = "editorHoverFocused";
+          }
+          {
+            "key" = "alt+up";
             "command" = "editor.action.moveLinesUpAction";
             "when" = "editorTextFocus && !editorReadonly";
           }
           {
-            "key" = "shift+alt+down";
+            "key" = "alt+down";
             "command" = "editor.action.moveLinesDownAction";
             "when" = "editorTextFocus && !editorReadonly";
           }
