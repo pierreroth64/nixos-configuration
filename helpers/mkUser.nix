@@ -66,7 +66,8 @@ in
       "networkmanager"
       "wheel"
       "dialout"
-    ] ++ myuser.userExtraGroups;
+    ]
+    ++ myuser.userExtraGroups;
   };
 
   users.groups.plugdev.members = [ myuser.userName ];
@@ -87,7 +88,7 @@ in
     users."${myuser.userName}" = {
       home.username = myuser.userName;
       home.homeDirectory = "/home/${myuser.userName}";
-      home.stateVersion = "24.11";
+      home.stateVersion = "25.05";
       xdg = {
         enable = true;
         mimeApps.defaultApplications = {

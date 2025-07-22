@@ -16,12 +16,10 @@
       name = "Bibata-Modern-Ice";
       size = 24;
     };
-    fonts = with pkgs; {
-      monospace = {
-        package = nerdfonts.override { fonts = [ "FiraCode" ]; };
-        name = "FiraCode Nerd Font Mono";
-      };
-    };
+    #TODO: restore desired (disabled these lines when upgrading to 25.05)
+    # fonts.packages = with pkgs; [
+    #   nerd-fonts.fira-code
+    # ];
     opacity.terminal = 1.0;
   };
 }
