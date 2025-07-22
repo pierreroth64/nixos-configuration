@@ -13,6 +13,13 @@ in
     programs = {
       kitty = {
         enable = true;
+        settings = {
+          active_border_color = "#00ff00";
+          draw_minimal_borders = "no";
+          window_margin_width = "3";
+          window_padding_width = "3";
+          window_border_width = "2pt";
+        };
         keybindings = {
           "${alt}+c" = "copy_to_clipboard";
           "${alt}+v" = "paste_from_clipboard";
