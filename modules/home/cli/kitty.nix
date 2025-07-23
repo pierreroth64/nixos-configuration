@@ -28,7 +28,7 @@ in
           "${alt}+LEFT" = "previous_tab";
           "${alt}+RIGHT" = "next_tab";
           "${alt}+w" = "close_window";
-          "${alt}+k" = "clear_terminal scrollback active";
+          "${alt}+k" = "clear_terminal clear active";
           "${alt}+ENTER" = "toggle_maximized";
           "${alt}+UP" = "scroll_line_up";
           "${alt}+DOWN" = "scroll_line_down";
