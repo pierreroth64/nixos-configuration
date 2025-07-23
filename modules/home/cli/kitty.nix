@@ -19,6 +19,7 @@ in
           window_margin_width = "3";
           window_padding_width = "3";
           window_border_width = "2pt";
+          copy_on_select = "clipboard";
         };
         keybindings = {
           "${alt}+c" = "copy_to_clipboard";
