@@ -12,7 +12,6 @@
 }:
 let
   shellAliases = {
-    cat = "bat";
     top = "btm";
     ".." = "cd ..";
     "..." = "cd ../..";
