@@ -21,6 +21,8 @@
     content = ''
       GITHUB_TOKEN=${config.sops.placeholder."users/peio/github/token"}
       NIX_NPM_TOKENS={"npm.pkg.github.com":"${config.sops.placeholder."users/peio/github/token"}"}
+      SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+      NIX_SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
     '';
   };
 
