@@ -37,7 +37,7 @@ in
           "${alt}+=" = "change_font_size all +1.0";
           "${alt}+-" = "change_font_size all -1.0";
           "${alt}+à" = "change_font_size all 0";
-          "ctrl+${shift}+ENTER" = "new_window";
+          "ctrl+${shift}+ENTER" = "launch --cwd=current";
           "ctrl+${shift}+LEFT" = "resize_window narrower";
           "ctrl+${shift}+RIGHT" = "resize_window wider";
           "ctrl+${shift}+UP" = "resize_window taller";
