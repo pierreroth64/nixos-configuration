@@ -19,7 +19,6 @@ let
     userFeatureFlags = {
       eove.enable = lib.mkForce false;
     };
-    userGithubToken = "";
   };
   mkUser = import ../helpers/mkUser.nix {
     inherit
