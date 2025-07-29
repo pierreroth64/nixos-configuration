@@ -6,6 +6,7 @@
   ...
 }:
 let
+  home = config.users.users.${userName}.home;
   cfg = config.my.${userName}.cli.shells;
 in
 {
@@ -20,6 +21,7 @@ in
         starship init fish | source
         direnv hook fish | source
         zoxide init fish | source
+        set -x GITHUB_TOKEN (cat ${home}/.github_token)
       '';
     };
 

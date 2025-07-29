@@ -84,11 +84,25 @@ in
     (import ../modules/home/index.nix myuser)
   ];
 
-  sops.templates."${myuser.userName}.github.token" = {
+  sops.templates."${myuser.userName}.github.token-for-nix" = {
     content = ''
       access-tokens = github.com=${config.sops.placeholder."users/${myuser.userName}/github/token"}
     '';
     path = "${home}/.config/nix/nix.conf";
+    owner = config.users.users.${myuser.userName}.name;
+  };
+
+  sops.templates."${myuser.userName}.github.token-for-npm" = {
+    content = ''//npm.pkg.github.com/:_authToken=${
+      config.sops.placeholder."users/${myuser.userName}/github/token"
+    }'';
+    path = "${home}/.npmrc";
+    owner = config.users.users.${myuser.userName}.name;
+  };
+
+  sops.templates."${myuser.userName}.github.token-raw" = {
+    content = ''${config.sops.placeholder."users/${myuser.userName}/github/token"}'';
+    path = "${home}/.github_token";
     owner = config.users.users.${myuser.userName}.name;
   };
 
