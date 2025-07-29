@@ -1,7 +1,6 @@
 {
   userName,
   userCLIEditor,
-  userGithubToken,
   ...
 }@user:
 {
@@ -29,10 +28,6 @@ in
     home-manager.users.${userName} = {
       home = {
         inherit shellAliases;
-        sessionVariables = {
-          EDITOR = userCLIEditor;
-          GITHUB_TOKEN = userGithubToken;
-        };
       };
     };
   };

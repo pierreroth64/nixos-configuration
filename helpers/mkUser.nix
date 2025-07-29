@@ -104,6 +104,9 @@ in
           "application/pdf" = config.my.${myuser.userName}."browsers.default"."desktop";
         };
       };
+      home.sessionVariables = {
+          EDITOR = myuser.userCLIEditor;
+      };
     };
   };
 }

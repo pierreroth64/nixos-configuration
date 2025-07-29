@@ -22,10 +22,6 @@ let
       };
       eove.enable = lib.mkForce true;
     };
-    # TODO: this line does not work as it exports the ciphered value of the token
-    # on the command line, use:
-    # export GITHUB_TOKEN=$(sops -d secrets/secrets.json | jq -r .users.peio.github.token)
-    userGithubToken = config.sops.placeholder."users/${userName}/github/token";
   };
   mkUser = import ../helpers/mkUser.nix {
     inherit
