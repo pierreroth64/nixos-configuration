@@ -7,6 +7,7 @@
 }:
 { myuser }:
 let
+  home = config.users.users.${myuser.userName}.home;
   defaultFeatureFlags = {
     cli = {
       git.enable = true;
@@ -82,6 +83,14 @@ in
   imports = [
     (import ../modules/home/index.nix myuser)
   ];
+
+  sops.templates."${myuser.userName}.github.token" = {
+      content = ''
+            access-tokens = github.com=${config.sops.placeholder."users/${myuser.userName}/github/token"}
+      '';
+      path = "${home}/.config/nix/nix.conf";
+      owner = config.users.users.${myuser.userName}.name;
+    };
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
