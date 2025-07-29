@@ -85,12 +85,12 @@ in
   ];
 
   sops.templates."${myuser.userName}.github.token" = {
-      content = ''
-            access-tokens = github.com=${config.sops.placeholder."users/${myuser.userName}/github/token"}
-      '';
-      path = "${home}/.config/nix/nix.conf";
-      owner = config.users.users.${myuser.userName}.name;
-    };
+    content = ''
+      access-tokens = github.com=${config.sops.placeholder."users/${myuser.userName}/github/token"}
+    '';
+    path = "${home}/.config/nix/nix.conf";
+    owner = config.users.users.${myuser.userName}.name;
+  };
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
@@ -105,7 +105,7 @@ in
         };
       };
       home.sessionVariables = {
-          EDITOR = myuser.userCLIEditor;
+        EDITOR = myuser.userCLIEditor;
       };
     };
   };
