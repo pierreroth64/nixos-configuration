@@ -17,9 +17,7 @@ let
     userSSHIdentitySecondaryFile = "~/.ssh/id_rsa";
     userGPGPublicKey = "7E725B9260A593AF4906EACA4C19194F76882D47";
     userFeatureFlags = {
-      currencies = {
-        ledger.enable = lib.mkForce true;
-      };
+      currencies.ledger.enable = lib.mkForce true;
       eove.enable = lib.mkForce true;
       browsers.chromium.enable = lib.mkForce true;
     };
