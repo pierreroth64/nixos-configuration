@@ -21,7 +21,7 @@ let
         ledger.enable = lib.mkForce true;
       };
       eove.enable = lib.mkForce true;
-      chromium.enable = true;
+      browsers.chromium.enable = lib.mkForce true;
     };
   };
   mkUser = import ../helpers/mkUser.nix {
