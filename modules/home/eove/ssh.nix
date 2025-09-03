@@ -15,12 +15,12 @@ let
 in
 {
 
-  config = lib.mkIf cfg.eove.enable {
+  config = {
     home-manager.users.${userName} = {
       programs.ssh = {
         enable = true;
         extraConfig = "verifyHostKeyDNS = yes";
-        matchBlocks = {
+        matchBlocks = lib.mkIf cfg.eove.enable {
           "github.com" = {
             identityFile = "~/.ssh/" + userSSHIdentityFile;
           };
