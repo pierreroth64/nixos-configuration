@@ -1,7 +1,6 @@
 {
   userName,
   userSSHIdentityFile,
-  userSSHIdentitySecondaryFile,
   ...
 }:
 {
@@ -29,11 +28,6 @@ in
             hostname = "remote-access.eove.fr";
             user = "root";
           };
-          "remote-access-rsa" = {
-            identityFile = "~/.ssh/" + userSSHIdentitySecondaryFile;
-            hostname = "remote-access.eove.fr";
-            user = "root";
-          };
           "testlab-via-remoteaccess" = {
             hostname = "localhost";
             port = 1111;
@@ -43,19 +37,12 @@ in
           "cq-el-26-via-remoteaccess" = {
             hostname = "localhost";
             port = 8888;
-            # this bench does not know to deal with ed25519 keys
-            proxyJump = "remote-access-rsa";
+            proxyJump = "remote-access";
             user = "eoveadm";
           };
           "cq-el-64-via-remoteaccess" = {
             hostname = "localhost";
             port = 5555;
-            proxyJump = "remote-access";
-            user = "eoveadm";
-          };
-          "cq-el-65-via-remoteaccess" = {
-            hostname = "localhost";
-            port = 5556;
             proxyJump = "remote-access";
             user = "eoveadm";
           };

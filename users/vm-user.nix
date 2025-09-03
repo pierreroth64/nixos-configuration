@@ -14,7 +14,6 @@ let
     userShell = "fish";
     userExtraGroups = [ ];
     userSSHIdentityFile = "";
-    userSSHIdentitySecondaryFile = "";
     userGPGPublicKey = "";
     userFeatureFlags = {
       eove.enable = lib.mkForce false;
