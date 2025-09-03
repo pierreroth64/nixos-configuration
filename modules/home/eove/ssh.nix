@@ -11,26 +11,26 @@
   ...
 }:
 let
-  cfg = config.my.${userName}.eove;
+  cfg = config.my.${userName};
 in
 {
 
-  config = lib.mkIf cfg.enable {
+  config = lib.mkIf cfg.eove.enable {
     home-manager.users.${userName} = {
       programs.ssh = {
         enable = true;
         extraConfig = "verifyHostKeyDNS = yes";
         matchBlocks = {
           "github.com" = {
-            identityFile = userSSHIdentityFile;
+            identityFile = "~/.ssh/" + userSSHIdentityFile;
           };
           "remote-access" = {
-            identityFile = userSSHIdentityFile;
+            identityFile = "~/.ssh/" + userSSHIdentityFile;
             hostname = "remote-access.eove.fr";
             user = "root";
           };
           "remote-access-rsa" = {
-            identityFile = userSSHIdentitySecondaryFile;
+            identityFile = "~/.ssh/" + userSSHIdentitySecondaryFile;
             hostname = "remote-access.eove.fr";
             user = "root";
           };
