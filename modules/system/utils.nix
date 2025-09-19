@@ -5,6 +5,7 @@
       pciutils
       usbutils
       jq
+      gparted
     ];
   };
 }
