@@ -50,6 +50,7 @@ let
     network = {
       nmap.enable = true;
       wireshark.enable = true;
+      ftp.enable = true;
     };
     gaming = {
       steam.enable = true;
