@@ -36,7 +36,7 @@ in
           };
           "cq-el-26-via-remoteaccess" = {
             hostname = "localhost";
-            port = 8888;
+            port = 5556;
             proxyJump = "remote-access";
             user = "eoveadm";
           };
