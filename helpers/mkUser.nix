@@ -45,7 +45,7 @@ let
       vlc.enable = true;
       ffmpeg.enable = true;
     };
-    embedded.enable = true;
+    embedded.enable = false;
     eove.enable = false;
     network = {
       nmap.enable = true;
