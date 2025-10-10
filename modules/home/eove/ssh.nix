@@ -1,6 +1,7 @@
 {
   userName,
   userSSHIdentityFile,
+  userSSHIdentityExtraFile,
   ...
 }:
 {
@@ -28,10 +29,15 @@ in
             hostname = "remote-access.eove.fr";
             user = "root";
           };
+          "remote-access-with-rsa" = {
+            identityFile = "~/.ssh/" + userSSHIdentityExtraFile;
+            hostname = "remote-access.eove.fr";
+            user = "root";
+          };
           "testlab-via-remoteaccess" = {
             hostname = "localhost";
             port = 1111;
-            proxyJump = "remote-access";
+            proxyJump = "remote-access-with-rsa";
             user = "testlab";
           };
           "cq-el-26-via-remoteaccess" = {
