@@ -11,6 +11,7 @@
     (import ./build.nix user)
     (import ./i2c.nix user)
     (import ./minicom.nix user)
+    (import ./probe.nix user)
   ];
 
   options = {
