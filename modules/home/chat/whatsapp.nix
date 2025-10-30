@@ -15,7 +15,7 @@ in
 
   config = lib.mkIf cfg.whatsapp.enable {
     home-manager.users.${userName}.home.packages = with pkgs.unstable; [
-      whatsapp-for-linux
+      wasistlos
     ];
   };
 }
