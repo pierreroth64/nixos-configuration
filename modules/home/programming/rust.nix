@@ -12,6 +12,7 @@ in
 
   config = lib.mkIf cfg.enable {
     home-manager.users.${userName}.home.packages = with pkgs; [
+      rustc
       cargo
     ];
   };
