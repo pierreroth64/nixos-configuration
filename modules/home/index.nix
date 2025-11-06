@@ -14,6 +14,7 @@
     (import ./editors/index.nix user)
     (import ./eove/index.nix user)
     (import ./embedded/index.nix user)
+    (import ./programming/index.nix user)
     (import ./office/index.nix user)
     (import ./media/index.nix user)
     (import ./gaming/index.nix user)

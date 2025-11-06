@@ -46,6 +46,7 @@ let
       ffmpeg.enable = true;
     };
     embedded.enable = false;
+    programming.enable = false;
     eove.enable = false;
     network = {
       nmap.enable = true;

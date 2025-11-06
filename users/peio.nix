@@ -20,6 +20,7 @@ let
       currencies.ledger.enable = lib.mkForce true;
       eove.enable = lib.mkForce true;
       embedded.enable = lib.mkForce true;
+      programming.enable = lib.mkForce true;
       browsers.chromium.enable = lib.mkForce true;
     };
   };
