@@ -6,6 +6,7 @@
       usbutils
       jq
       gparted
+      file
     ];
   };
 }
