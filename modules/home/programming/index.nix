@@ -7,6 +7,7 @@
 }:
 {
   imports = [
+    (import ./build.nix user)
     (import ./rust.nix user)
   ];
 
