@@ -52,6 +52,7 @@ let
       nmap.enable = true;
       wireshark.enable = true;
       ftp.enable = true;
+      anydesk.enable = false;
     };
     gaming = {
       steam.enable = true;

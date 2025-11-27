@@ -22,6 +22,7 @@ let
       embedded.enable = lib.mkForce true;
       programming.enable = lib.mkForce true;
       browsers.chromium.enable = lib.mkForce true;
+      network.anydesk.enable = lib.mkForce true;
     };
   };
   mkUser = import ../helpers/mkUser.nix {
