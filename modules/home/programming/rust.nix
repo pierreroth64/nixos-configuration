@@ -14,6 +14,7 @@ in
     home-manager.users.${userName}.home.packages = with pkgs; [
       rustc
       cargo
+      cargo-modules
     ];
   };
 }
