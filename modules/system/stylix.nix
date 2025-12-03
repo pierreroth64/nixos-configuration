@@ -16,7 +16,7 @@
       name = "Bibata-Modern-Ice";
       size = 24;
     };
-    #TODO: restore desired (disabled these lines when upgrading to 25.05)
+    #TODO: restore desired (disabled these lines when upgrading to 25.11)
     # fonts.packages = with pkgs; [
     #   nerd-fonts.fira-code
     # ];

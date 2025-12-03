@@ -13,7 +13,7 @@ in
   config = lib.mkIf cfg.enable {
     home-manager.users.${userName}.home.packages = with pkgs; [
       cmake
-      clang-tools_16
+      clang-tools
       gcc
       gnumake
       binutils

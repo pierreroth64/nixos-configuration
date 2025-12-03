@@ -114,7 +114,7 @@ in
     users."${myuser.userName}" = {
       home.username = myuser.userName;
       home.homeDirectory = "/home/${myuser.userName}";
-      home.stateVersion = "25.05";
+      home.stateVersion = "25.11";
       xdg = {
         enable = true;
         mimeApps.defaultApplications = {

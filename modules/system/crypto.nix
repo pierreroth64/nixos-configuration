@@ -8,7 +8,7 @@
   };
   programs = {
     ssh = {
-      startAgent = true;
+      # startAgent = true;
     };
     gnupg = {
       agent = {
