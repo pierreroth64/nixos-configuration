@@ -124,6 +124,7 @@ in
       };
       home.sessionVariables = {
         EDITOR = myuser.userCLIEditor;
+        VISUAL = myuser.userVisualEditor;
       };
     };
   };

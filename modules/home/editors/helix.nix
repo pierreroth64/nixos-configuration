@@ -91,7 +91,7 @@ in
           }
           {
             name = "typescript";
-            language-servers = [ "typescript-language-server"];
+            language-servers = [ "typescript-language-server" ];
           }
         ];
       };

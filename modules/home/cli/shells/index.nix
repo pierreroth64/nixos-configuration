@@ -1,6 +1,5 @@
 {
   userName,
-  userCLIEditor,
   ...
 }@user:
 {

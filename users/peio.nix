@@ -10,7 +10,8 @@ let
     userName = "peio";
     userPassword = "";
     userEmail = "pierreroth64@gmail.com";
-    userCLIEditor = "vim";
+    userCLIEditor = "hx";
+    userVisualEditor = "hx";
     userShell = "fish";
     userExtraGroups = [ ];
     userSSHIdentityFile = "id_ed25519";

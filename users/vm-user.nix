@@ -11,6 +11,7 @@ let
     userPassword = "test";
     userEmail = "test@gmail.com";
     userCLIEditor = "vim";
+    userVisualEditor = "vim";
     userShell = "fish";
     userExtraGroups = [ ];
     userSSHIdentityFile = "";
