@@ -32,7 +32,6 @@
             3
           ];
         };
-
       };
       btop.enable = true;
       bottom.enable = true;
