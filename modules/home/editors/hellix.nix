@@ -19,6 +19,11 @@ in
       enable = true;
       settings = {
         editor = {
+          indent-guides = {
+            render = true;
+            character = "▏";
+            skip-levels = 1;
+          };
           cursor-shape = {
             insert = "bar";
           };
@@ -36,6 +41,11 @@ in
               "spacer"
               "version-control"
             ];
+            right = [
+              "position"
+              "separator"
+              "total-line-numbers"
+            ];
           };
         };
       };
@@ -49,7 +59,13 @@ in
             };
             language-servers = [ "rust-analyzer" ];
             roots = [ "Cargo.lock" ];
-            auto-pairs = true;
+            auto-pairs = {
+              "(" = ")";
+              "{" = "}";
+              "[" = "]";
+              "\"" = "\"";
+              "<" = ">";
+            };
           }
         ];
       };
