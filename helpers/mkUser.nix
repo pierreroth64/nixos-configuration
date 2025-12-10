@@ -26,8 +26,9 @@ let
       };
     };
     editors = {
-      vscode.enable = true;
-      android-studio.enable = true;
+      vscode.enable = false;
+      android-studio.enable = false;
+      helix.enable = false;
     };
     office = {
       libreoffice.enable = true;

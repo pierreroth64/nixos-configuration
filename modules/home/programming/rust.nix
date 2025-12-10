@@ -15,6 +15,8 @@ in
       rustc
       cargo
       cargo-modules
+      rust-analyzer
+      rustfmt
     ];
   };
 }
