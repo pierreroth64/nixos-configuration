@@ -18,8 +18,25 @@ in
     home-manager.users.${userName}.programs.helix = {
       enable = true;
       settings = {
-        cursor-shape = {
-          insert = "bar";
+        editor = {
+          cursor-shape = {
+            insert = "bar";
+          };
+          file-picker = {
+            hidden = false;
+          };
+          statusline = {
+            left = [
+              "mode"
+              "spinner"
+              "file-name"
+              "read-only-indicator"
+              "file-modification-indicator"
+              "separator"
+              "spacer"
+              "version-control"
+            ];
+          };
         };
       };
       languages = {
@@ -32,6 +49,7 @@ in
             };
             language-servers = [ "rust-analyzer" ];
             roots = [ "Cargo.lock" ];
+            auto-pairs = true;
           }
         ];
       };
