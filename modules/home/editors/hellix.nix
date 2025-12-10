@@ -17,6 +17,24 @@ in
 
     home-manager.users.${userName}.programs.helix = {
       enable = true;
+      settings = {
+        cursor-shape = {
+          insert = "bar";
+        };
+      };
+      languages = {
+        language = [
+          {
+            name = "rust";
+            formatter = {
+              command = "rustfmt";
+              args = [ ];
+            };
+            language-servers = [ "rust-analyzer" ];
+            roots = [ "Cargo.lock" ];
+          }
+        ];
+      };
     };
   };
 }

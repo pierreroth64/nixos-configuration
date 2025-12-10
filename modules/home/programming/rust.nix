@@ -30,7 +30,6 @@ in
       rustc
       rust-analyzer
       rustfmt
-
     ];
   };
 }
