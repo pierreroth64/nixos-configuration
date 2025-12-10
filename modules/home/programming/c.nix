@@ -12,7 +12,7 @@ in
 
   config = lib.mkIf cfg.enable {
     home-manager.users.${userName}.home.packages = with pkgs; [
-      ccls
+      clang-tools
     ];
   };
 }

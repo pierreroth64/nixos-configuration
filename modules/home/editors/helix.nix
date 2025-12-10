@@ -95,7 +95,7 @@ in
           }
           {
             name = "c";
-            language-servers = [ "ccls"];
+            language-servers = [ "clangd" ];
           }
         ];
       };
