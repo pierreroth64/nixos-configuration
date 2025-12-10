@@ -16,6 +16,23 @@
         enableBashIntegration = true;
         enableFishIntegration = true;
         enableZshIntegration = true;
+        settings = {
+          mgr = {
+            show_hidden = true;
+            show_symlink = true;
+            sort_by = "natural";
+            sort_dir_first = true;
+            sort_sensitive = false;
+            sort_reverse = false;
+          };
+
+          mgr.ratio = [
+            1
+            2
+            3
+          ];
+        };
+
       };
       btop.enable = true;
       bottom.enable = true;
