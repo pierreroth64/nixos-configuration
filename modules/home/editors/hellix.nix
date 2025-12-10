@@ -48,6 +48,28 @@ in
             ];
           };
         };
+        keys = {
+          normal = {
+            "left" = "no_op";
+            "right" = "no_op";
+            "up" = "no_op";
+            "down" = "no_op";
+          };
+          insert = {
+            "left" = "no_op";
+            "right" = "no_op";
+            "up" = "no_op";
+            "down" = "no_op";
+
+            # to be able to move in insert mode
+            "C-h" = "move_char_left";
+            "C-l" = "move_char_right";
+            "C-j" = "move_line_down";
+            "C-k" = "move_line_up";
+            "C-w" = "move_next_word_start";
+            "C-b" = "move_prev_word_start";
+          };
+        };
       };
       languages = {
         language = [
