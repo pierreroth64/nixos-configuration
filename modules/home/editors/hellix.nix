@@ -10,8 +10,7 @@ let
 in
 {
   options = {
-    my.${userName}.editors.helix.enable =
-      lib.mkEnableOption "enable helix editor for ${userName}";
+    my.${userName}.editors.helix.enable = lib.mkEnableOption "enable helix editor for ${userName}";
   };
 
   config = lib.mkIf cfg.helix.enable {
