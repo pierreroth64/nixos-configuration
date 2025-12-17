@@ -41,7 +41,6 @@
   services.xserver.xkb = {
     layout = "fr";
     variant = "azerty";
-    options = "caps:escape";
   };
 
   console.keyMap = "fr";
