@@ -97,15 +97,15 @@ in
   };
 
   sops.templates."${myuser.userName}.github.token-for-npm" = {
-    content = ''//npm.pkg.github.com/:_authToken=${
+    content = "//npm.pkg.github.com/:_authToken=${
       config.sops.placeholder."users/${myuser.userName}/github/token"
-    }'';
+    }";
     path = "${home}/.npmrc";
     owner = config.users.users.${myuser.userName}.name;
   };
 
   sops.templates."${myuser.userName}.github.token-raw" = {
-    content = ''${config.sops.placeholder."users/${myuser.userName}/github/token"}'';
+    content = "${config.sops.placeholder."users/${myuser.userName}/github/token"}";
     path = "${home}/.github_token";
     owner = config.users.users.${myuser.userName}.name;
   };

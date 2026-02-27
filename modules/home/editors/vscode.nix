@@ -26,6 +26,7 @@ in
 
           userSettings = {
             "nix.formatterPath" = "nixfmt";
+            "editor.inlayHints.enabled" = "off";
           };
           keybindings = [
             {
