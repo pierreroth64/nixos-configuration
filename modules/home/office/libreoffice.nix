@@ -14,7 +14,7 @@ in
   };
 
   config = lib.mkIf cfg.libreoffice.enable {
-    home-manager.users.${userName}.home.packages = with pkgs.unstable; [
+    home-manager.users.${userName}.home.packages = with pkgs; [
       libreoffice
     ];
   };
