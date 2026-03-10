@@ -27,6 +27,10 @@ in
           userSettings = {
             "nix.formatterPath" = "nixfmt";
             "editor.inlayHints.enabled" = "off";
+            "editor.codeLens" = "false";
+            "rust-analyzer.cargo.allTargets" = "false";
+            "rust-analyzer.cargo.features" = "all";
+            "rust-analyzer.checkOnSave" = "false";
           };
           keybindings = [
             {
