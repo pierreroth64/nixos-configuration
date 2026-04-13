@@ -21,7 +21,6 @@ in
         profiles.default = {
           extensions = with pkgs.vscode-extensions; [
             jnoortheen.nix-ide
-            rust-lang.rust-analyzer
           ];
 
           userSettings = {
@@ -31,6 +30,8 @@ in
             "rust-analyzer.cargo.allTargets" = "false";
             "rust-analyzer.cargo.features" = "all";
             "rust-analyzer.checkOnSave" = "false";
+            "rust-analyzer.server.path" = "/etc/profiles/per-user/${userName}/bin/rust-analyzer";
+            "rust-analyzer.server.download" = false;
           };
           keybindings = [
             {
