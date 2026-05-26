@@ -5,6 +5,7 @@
     ./bash.nix
     ./cli.nix
     ./git.nix
+    ./kernel.nix
     ./nix.nix
     ./sops.nix
     ./dua.nix
