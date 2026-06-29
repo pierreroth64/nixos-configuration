@@ -23,7 +23,7 @@ let
       embedded.enable = lib.mkForce true;
       programming.enable = lib.mkForce true;
       browsers.chromium.enable = lib.mkForce true;
-      network.anydesk.enable = lib.mkForce true;
+      network.anydesk.enable = lib.mkForce false;
       editors.vscode.enable = lib.mkForce true;
       editors.android-studio.enable = lib.mkForce true;
       editors.helix.enable = lib.mkForce true;
