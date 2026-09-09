@@ -1,4 +1,4 @@
 { pkgs, ... }:
 {
-  boot.kernelPackages = pkgs.unstable.linuxKernel.packages.linux_7_1;
+  boot.kernelPackages = pkgs.unstable.linuxKernel.packages.linux_7_2;
 }
