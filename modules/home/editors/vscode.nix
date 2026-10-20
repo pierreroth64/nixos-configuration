@@ -32,6 +32,9 @@ in
             "rust-analyzer.checkOnSave" = "false";
             "rust-analyzer.server.path" = "rust-analyzer";
             "rust-analyzer.server.download" = false;
+            "editor.tokenColorCustomizations" = {
+              "comments" = "#458588";
+            };
           };
           keybindings = [
             {
