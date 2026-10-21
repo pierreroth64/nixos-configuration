@@ -199,6 +199,10 @@ in
               "command" = "workbench.action.quickOpen";
             }
             {
+              "key" = "alt+b";
+              "command" = "editor.action.selectToBracket";
+            }
+            {
               "key" = "shift+alt+p";
               "command" = "workbench.action.showCommands";
             }
